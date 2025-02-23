@@ -1,11 +1,24 @@
-import {useEffect, useRef} from 'react'
-import '../css/Map.css'
+import {useEffect, useRef, useState} from 'react'
+import '../css/Main.css'
 
 function Map() {
   const mapRef = useRef(null)
-  const {naver} = window
-  const location = new naver.maps.LatLng(37.590979, 127.043653)
+  const [naverLoaded, setNaverLoaded] = useState(false); // ✅ 네이버 API 로드 여부 상태 추가
+
+
   useEffect(() => {
+    if (window.naver && window.naver.maps) {
+      setNaverLoaded(true); // ✅ 네이버 API 로드 완료 시 상태 업데이트
+    }
+  }, []);
+
+
+  useEffect(() => {
+    if (!naverLoaded) return;
+
+    const {naver} = window
+    const location = new naver.maps.LatLng(37.590979, 127.043653)
+
     // 네이버 지도 옵션 선택
     const mapOptions = {
       // 지도의 초기 중심 좌표
@@ -24,21 +37,24 @@ function Map() {
       position: location,
       map: mapRef.current
     })
-  }, [])
+  }, [naverLoaded])
 
   return (
-    <div className="container">
-      <div className="address_title">
+    <div>
+      <div className="title" style={{ borderBottom: '2px solid #ccc', paddingBottom: '5px', marginBottom: '5px' }}>
         <ul>오시는 길</ul>
       </div>
-      <div className="address_contents">
+      <div className="content">
+        <ul><br/>2025년 9월 20일 오후 5시 30분</ul>
         <ul>서울 동대문구 회기로 56</ul>
-        <ul>2025년 9월 20일 오후 5시 30분</ul>
-        <ul />
+        <ul>세종대왕 기념관</ul>
       </div>
-      <div id="map" style={{width: '300px', height: '300px'}} />
+      <div style={{ display: 'flex', justifyContent: 'center', width: '300px', height: '300px' }}>
+        <div id="map" style={{ alignItems: 'center', width: '300px', height: '300px' }} />
+      </div>
     </div>
   )
 }
 
 export default Map
+

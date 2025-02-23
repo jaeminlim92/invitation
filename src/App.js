@@ -1,16 +1,15 @@
 import './App.css'
 import React from 'react'
-import Main from './components/Main'
 import Map from './components/Map'
 import MyGallery from './components/MyGallery'
+import Layout from './components/Layout'
 
 function App() {
   return (
-    <>
-      <Main />
-      <Map />
+    <Layout>
       <MyGallery />
-    </>
+      <Map />
+    </Layout>
   )
 }
 
