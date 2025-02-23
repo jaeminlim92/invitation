@@ -49,8 +49,8 @@ function Map() {
         <ul>서울 동대문구 회기로 56</ul>
         <ul>세종대왕 기념관</ul>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', width: '300px', height: '300px' }}>
-        <div id="map" style={{ alignItems: 'center', width: '300px', height: '300px' }} />
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+        <div id="map" style={{ width: '300px', height: '300px' }} />
       </div>
     </div>
   )

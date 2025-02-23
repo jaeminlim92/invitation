@@ -21,6 +21,15 @@
   font-family: "../fonts/SeoulHangangM.ttf", serif;
 }
 
+.content {
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 5px;
+  list-style: none;
+  font-family: "../fonts/SeoulHangangL.ttf", serif;
+}
+
 
 .content > ul {
   font-size: 15px;
