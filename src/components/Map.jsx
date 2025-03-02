@@ -47,7 +47,7 @@ function Map() {
       <div className="content">
         <ul><br/>2025년 9월 20일 오후 5시 30분</ul>
         <ul>서울 동대문구 회기로 56</ul>
-        <ul>세종대왕 기념관 test</ul>
+        <ul>세종대왕 기념관</ul>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
         <div id="map" style={{ width: '300px', height: '300px' }} />
