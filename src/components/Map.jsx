@@ -44,17 +44,32 @@ function Map() {
       <div className="title" style={{ borderBottom: '2px solid #ccc', paddingBottom: '5px', marginBottom: '5px' }}>
         <ul>오시는 길</ul>
       </div>
-      <div className="content">
+      <div className="content" style={{ textAlign: 'left' }}>
         <ul><br/>2025년 9월 20일 오후 5시 30분</ul>
         <ul>서울 동대문구 회기로 56</ul>
         <ul>세종대왕 기념관</ul>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-        <div id="map" style={{ width: '300px', height: '300px' }} />
+        <div id="map" style={{ width: '100%', height: '300px' }} />
+      </div>
+      <div className="content" style={{ textAlign: 'left' }}>
+        <h3>🚌 셔틀버스</h3>
+        <p>1호선 청량리역 하차 2번출구</p>
+        <p>6호선 고려대역 하차 3번출구 앞</p>
+        <hr style={{ border: '0.5px solid #ddd' }} />
+
+        <h3>🚇 지하철</h3>
+        <p>1호선 청량리역 2번출구 도보 15분 거리</p>
+        <p>6호선 고려대역 3번출구 도보 5분 거리</p>
+        <hr style={{ border: '0.5px solid #ddd' }} />
+
+        <h3>🚌 버스</h3>
+        <p>세종대왕기념관 정류장 하차</p>
+        <p><strong>지선버스</strong> 1226</p>
+        <p><strong>간선버스</strong> 201, 273</p>
       </div>
     </div>
   )
 }
 
 export default Map
-
