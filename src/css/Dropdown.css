@@ -1,0 +1,110 @@
+.common-dropdown-wrapper {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+
+.common-dropdown-label {
+  background-color: #eaf6f8;
+  padding: 12px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  border-radius: 4px 4px 0 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.common-dropdown-content {
+  background-color: #f7fefe;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
+  padding: 0 16px;
+  border: 1px solid #cfe8eb;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+
+.gift-info-content {
+  margin-bottom: 16px;
+}
+
+.owner-info {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.account-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.account-info button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.account-info button:hover {
+  background-color: #f3f3f3;
+}
+
+
+.arrow {
+  font-size: 16px;
+}
+
+.toast-message {
+  font-size: 12px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #4caf50;
+  color: #2e7d32;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 999;
+  font-weight: 500;
+  text-align: center;
+}
+
+.common-dropdown-wrapper.bride.open .common-dropdown-content {
+  max-height: 1000px; /* sufficiently large to accommodate all content */
+  padding: 16px;
+  opacity: 1;
+}
+
+.common-dropdown-wrapper.bride .common-dropdown-label {
+  background-color: #ffe5ec;
+}
+
+.common-dropdown-wrapper.bride .common-dropdown-content {
+  border: 1px solid #f5a9c4;
+  background-color: #fff0f5;
+}
+
+.common-dropdown-wrapper.groom .common-dropdown-label {
+  background-color: #e0f7fa;
+}
+
+.common-dropdown-wrapper.groom .common-dropdown-content {
+  border: 1px solid #b2ebf2;
+  background-color: #f0fefe;
+}
+
+.account-number {
+  flex-grow: 1;
+  margin-right: 12px;
+  word-break: break-all;
+}
