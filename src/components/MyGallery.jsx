@@ -26,7 +26,7 @@ const MyGallery = () => {
             alignItems: 'center',
             width: '100%', // ✅ 전체 폭 사용
             maxWidth: '600px', // ✅ 중앙 정렬 고정 크기 적용
-            margin: '0 auto', // ✅ 부모 기준 가로 중앙 정렬
+            margin: '0 auto 40px', // ✅ 부모 기준 가로 중앙 정렬
           }}>
           {images.map((image, index) => {
             return (
