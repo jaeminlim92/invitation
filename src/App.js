@@ -1,5 +1,5 @@
 import './App.css'
-import React from 'react'
+import React, {useEffect} from 'react'
 import Map from './components/Map'
 import MyGallery from './components/MyGallery'
 import Layout from './components/Layout'

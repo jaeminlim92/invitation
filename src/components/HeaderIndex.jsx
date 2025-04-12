@@ -3,12 +3,16 @@ import styled from '@emotion/styled'
 
 const HeaderSection = styled.main`
   width: 100%;
-  height: 100vh; /* 한 화면을 딱 차지하게 */
+  height: 100dvh;
   text-align: center;
-  //background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fefdfb;
 
   img {
-    width: 430px;
+    width: 100%;
+    flex-grow: 1;
     max-height: 80vh;
     object-fit: cover;
     height: auto;
@@ -18,12 +22,6 @@ const HeaderSection = styled.main`
     -webkit-user-select: none;
   }
 `
-const messageStyle = {
-  paddingTop: '10px',
-  paddingBottom: '10px',
-  fontSize: '14px',
-  fontFamily: 'var(--pretendard) sans-serif'
-}
 
 const Bottom = styled.div`
   padding: 30px 20px;
@@ -64,15 +62,6 @@ const PlaceSection = styled.div`
   line-height: 1.6;
   color: #555;
 `
-const FrameWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.1); /* 연한 회색 테두리 */
-  position: relative;
-`
-
 export default function HeaderIndex() {
   return (
     <HeaderSection>
