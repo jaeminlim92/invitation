@@ -8,12 +8,12 @@ import Transfer from './components/Transfer'
 
 function App() {
   return (
-    <Layout>
+    <>
       <HeaderIndex />
       <MyGallery />
       <Map />
       <Transfer/>
-    </Layout>
+    </>
   )
 }
 
