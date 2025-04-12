@@ -5,13 +5,15 @@ import MyGallery from './components/MyGallery'
 import Layout from './components/Layout'
 import HeaderIndex from './components/HeaderIndex'
 import Transfer from './components/Transfer'
+import Greeting from './components/Greeting'
 
 function App() {
   return (
     <Layout>
       <HeaderIndex />
-      {/*<MyGallery />*/}
-      {/*<Map />*/}
+      <Greeting />
+      <MyGallery />
+      <Map />
       {/*<Transfer />*/}
     </Layout>
   )

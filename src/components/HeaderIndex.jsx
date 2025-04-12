@@ -1,21 +1,20 @@
 import wedding from '../assets/images/wedding_title.jpg'
 import styled from '@emotion/styled'
+import {useEffect} from 'react'
 
 const HeaderSection = styled.main`
   width: 100%;
-  height: 100dvh;
+  height: calc(var(--vh, 1vh) * 100);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #fefdfb;
 
   img {
     width: 100%;
     flex-grow: 1;
-    max-height: 80vh;
+    height: 100%;
     object-fit: cover;
-    height: auto;
     display: block;
     user-select: none;
     -webkit-user-drag: none;
@@ -63,6 +62,11 @@ const PlaceSection = styled.div`
   color: #555;
 `
 export default function HeaderIndex() {
+  useEffect(() => {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  }, [])
+
   return (
     <HeaderSection>
       <img src={wedding} alt={'이미지'} onContextMenu={(e) => e.preventDefault()} />

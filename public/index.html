@@ -7,10 +7,22 @@
     <meta property="og:description" content="2025년 09월 20일 토요일 오후 5시 30분, 같이 즐겨주세요!">
     <meta property="og:url" content="https://jaeminlim92.github.io/invitation/">
     <meta property="og:image" content="https://jaeminlim92.github.io/invitation/preview_test.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
     <meta name="theme-color" content="#000000" />
     <title>우리의 결혼식에 초대합니다</title>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=%REACT_APP_NAVER_MAP_API_KEY%"></script>
+    <script>
+      document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+      });
+      // Dynamic vh calculation
+      function setVh() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
+      window.addEventListener('resize', setVh);
+      setVh();
+    </script>
   </head>
   <body>
     <div id="root"></div>

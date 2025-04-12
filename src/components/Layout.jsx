@@ -12,7 +12,7 @@ const LayoutWrapper = styled.div`
 const ContentWrapper = styled.main`
   width: 100%;
   max-width: 430px;
-  background-color: #f5f3ed;
+  background-color: #fefdfb;
 `
 
 export default function Layout({children}) {

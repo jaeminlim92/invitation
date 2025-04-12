@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +12,10 @@ body {
     'sans-serif', 'Gowun Dodum';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 code {
@@ -14,3 +23,10 @@ code {
     monospace;
 }
 
+.HeaderSection {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.HeaderSection img {
+  height: 100%;
+}
