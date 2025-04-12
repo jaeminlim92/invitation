@@ -1,29 +1,24 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
-const LayoutContainer = styled.div`
+const LayoutWrapper = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  background-color: dimgray;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+`
+
+const ContentWrapper = styled.main`
   width: 100%;
-  min-height: 100vh;
-`;
+  max-width: 430px;
+  background-color: #f5f3ed;
+`
 
-const ContentWrapper = styled.div`
-  width: 100%;
-  max-width: clamp(320px, 90vw, 600px);  // ✅ 반응형으로 최대 너비 설정
-  background-color: white;  // ✅ 기본 흰 배경 유지
-  box-shadow: none;  // ✅ 그림자 제거
-  border-radius: 0;  // ✅ 모서리 둥글게 처리 제거
-`;
-
-
-const Layout = ({ children }) => {
+export default function Layout({children}) {
   return (
-    <LayoutContainer>
+    <LayoutWrapper>
       <ContentWrapper>{children}</ContentWrapper>
-    </LayoutContainer>
-  );
-};
-
-export default Layout;
+    </LayoutWrapper>
+  )
+}

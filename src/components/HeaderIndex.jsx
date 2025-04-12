@@ -1,19 +1,101 @@
-import '../css/Header.css';
-import weddingImg from '../assets/images/wedding_title.jpg';
+import wedding from '../assets/images/wedding_title.jpg'
+import styled from '@emotion/styled'
 
-function HeaderIndex() {
-  return (
-    <section className="header-section">
-      <div className="header-inner">
-        <img src={weddingImg} alt="배경" className="header-bg" />
-        <div className="header-content">
-          <h1 className="header-title">Our Day</h1>
-          <p className="header-subtitle">2025년 9월 20일 · 세종대왕기념관</p>
-        </div>
-      </div>
-    </section>
-  );
+const HeaderSection = styled.main`
+  width: 100%;
+  height: 100vh; /* 한 화면을 딱 차지하게 */
+  text-align: center;
+  //background-color: white;
+
+  img {
+    width: 430px;
+    max-height: 80vh;
+    object-fit: cover;
+    height: auto;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+`
+const messageStyle = {
+  paddingTop: '10px',
+  paddingBottom: '10px',
+  fontSize: '14px',
+  fontFamily: 'var(--pretendard) sans-serif'
 }
 
-export default HeaderIndex;
+const Bottom = styled.div`
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Gowun Dodum', sans-serif;
+`
 
+const NameWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+`
+
+const Divider = styled.div`
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+`
+
+const Name = styled.span`
+  font-size: 30px;
+  font-weight: bold;
+  color: #555;
+`
+
+const DateTimeSection = styled.div`
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  word-spacing: 10px;
+  color: #555;
+`
+
+const PlaceSection = styled.div`
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #555;
+`
+const FrameWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* 연한 회색 테두리 */
+  position: relative;
+`
+
+export default function HeaderIndex() {
+  return (
+    <HeaderSection>
+      <img src={wedding} alt={'이미지'} onContextMenu={(e) => e.preventDefault()} />
+      <Bottom>
+        <NameWrap>
+          <div>
+            <Name>임재민</Name>
+          </div>
+          <Divider>
+            <div>/</div>
+          </Divider>
+          <div>
+            <Name>전주현</Name>
+          </div>
+        </NameWrap>
+        <DateTimeSection>
+          <div>2025.9.20 SAT. 5:30 PM</div>
+        </DateTimeSection>
+        <PlaceSection>
+          <div>세종대왕 기념관</div>
+        </PlaceSection>
+      </Bottom>
+    </HeaderSection>
+  )
+}
