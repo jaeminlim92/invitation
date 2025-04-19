@@ -1,6 +1,5 @@
 import {useEffect, useRef, useState} from 'react'
 import '../css/Main.css'
-import styled from '@emotion/styled'
 
 function Map() {
   const mapRef = useRef(null)

@@ -14,7 +14,6 @@ const setVh = () => {
 }
 
 setVh()
-window.addEventListener('resize', setVh)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
