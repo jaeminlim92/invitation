@@ -5,6 +5,7 @@ import MyGallery from './components/MyGallery'
 import Layout from './components/Layout'
 import HeaderIndex from './components/HeaderIndex'
 import Greeting from './components/Greeting'
+import Transfer from './components/Transfer'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Greeting />
       <MyGallery />
       <Map />
-      {/*<Transfer />*/}
+      <Transfer />
     </Layout>
   )
 }
