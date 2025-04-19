@@ -1,5 +1,6 @@
 import Dropdown from './Dropdown'
 import '../css/Transfer.css'
+import bride from '../assets/images/bride.png'
 
 function Transfer() {
   return (
@@ -26,7 +27,12 @@ function Transfer() {
         </div>
         <div className="account-section">
           <Dropdown
-            title="신부측"
+            title={
+              <>
+                <img src={bride} alt={'신부 아이콘'} style={{width: '18px', height: '18px', marginRight: '6px'}} />
+                신부 측
+              </>
+            }
             accounts={[
               {role: '신부 ', owner: '전주현', bank: '우리', number: '1002-345-678901', className: 'account-card'}
             ]}
