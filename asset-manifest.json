@@ -1,20 +1,26 @@
 {
   "files": {
-    "main.css": "/invitation/static/css/main.20b7e40d.css",
-    "main.js": "/invitation/static/js/main.bd6a1c14.js",
+    "main.css": "/invitation/static/css/main.44bbac09.css",
+    "main.js": "/invitation/static/js/main.dc24b772.js",
     "static/js/453.21be8fb1.chunk.js": "/invitation/static/js/453.21be8fb1.chunk.js",
+    "static/media/Photo1.png": "/invitation/static/media/Photo1.a44426887313889e6db7.png",
+    "static/media/Photo2.png": "/invitation/static/media/Photo2.4f8960eb68415166cfa9.png",
     "static/media/wedding-info-carmera.png": "/invitation/static/media/wedding-info-carmera.2b591e170648dcd38895.png",
+    "static/media/photo2.jpg": "/invitation/static/media/photo2.d03b9abd0e628850e246.jpg",
+    "static/media/Photo3.png": "/invitation/static/media/Photo3.65d9bab8a1b5c3e9783e.png",
     "static/media/image_title.png": "/invitation/static/media/image_title.3ed10fd7f9965e59184d.png",
+    "static/media/photo1.jpg": "/invitation/static/media/photo1.5ef16db947cd79f45bd7.jpg",
     "static/media/wedding_title.jpg": "/invitation/static/media/wedding_title.f1f2266fc7bf969def3c.jpg",
     "static/media/love_song_component.gif": "/invitation/static/media/love_song_component.9199d8583f47e5862dac.gif",
     "static/media/angel_photo.png": "/invitation/static/media/angel_photo.12625d9a87dd483a3cfc.png",
+    "static/media/background.png": "/invitation/static/media/background.59109e281cb9701372b1.png",
     "index.html": "/invitation/index.html",
-    "main.20b7e40d.css.map": "/invitation/static/css/main.20b7e40d.css.map",
-    "main.bd6a1c14.js.map": "/invitation/static/js/main.bd6a1c14.js.map",
+    "main.44bbac09.css.map": "/invitation/static/css/main.44bbac09.css.map",
+    "main.dc24b772.js.map": "/invitation/static/js/main.dc24b772.js.map",
     "453.21be8fb1.chunk.js.map": "/invitation/static/js/453.21be8fb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20b7e40d.css",
-    "static/js/main.bd6a1c14.js"
+    "static/css/main.44bbac09.css",
+    "static/js/main.dc24b772.js"
   ]
 }
