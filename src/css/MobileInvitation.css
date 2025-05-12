@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mobileinvitation {
+    background-color: #808080;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+.mobileinvitation .div-2 {
+    background-color: #ffffff;
+    height: 7000px;
+    overflow: hidden;
+    position: relative;
+    width: 395px;
+}

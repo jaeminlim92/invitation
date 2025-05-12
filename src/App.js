@@ -2,17 +2,15 @@ import './App.css'
 import React from 'react'
 import Map from './components/Map'
 import MyGallery from './components/MyGallery'
-import Layout from './components/Layout'
 import HeaderIndex from './components/HeaderIndex'
 import Transfer from './components/Transfer'
+import SectionMain from './components/SectionMain'
+import MobileInvitation from './components/MobileInvitation'
 
 function App() {
   return (
     <>
-      <HeaderIndex />
-      <MyGallery />
-      <Map />
-      <Transfer/>
+      <MobileInvitation />
     </>
   )
 }

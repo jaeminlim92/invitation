@@ -94,3 +94,5 @@ package-lock.json
 
 .history
 .idea
+
+build

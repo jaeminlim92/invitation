@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
+
+
+.photo {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%); /* 가로 중앙 정렬 */
+  font-size: 60px;
+  font-family: 'Playfair Display SC', serif;
+  text-align: center; /* 텍스트 가로 정렬 */
+}
+
+.gallery {
+  position: absolute;
+  top: 35%; /* 상단에서 10% 위치 */
+  left: 51%;
+  transform: translateX(-20%); /* 가로 중앙 정렬 */
+  text-transform: capitalize;
+  text-align: center; /* 텍스트 가로 정렬 */
+}
+
+.textPhoto {
+  width: 100%;
+  position: relative;
+  height: 122px;
+  text-align: center;
+  font-size: 64px;
+  color: #7f0f13;
+  font-family: 'Pinyon Script', serif;
+}
+
+.notice {
+   position: relative;
+  font-size: 14px;
+  font-family: 'Noto Sans KR';
+  color: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+}
+
+.gallery-container {
+  transition: all 0.5s ease-in-out;
+  transform-origin: top;
+  overflow: hidden;
+}
+
+.gallery-expandable {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.gallery-expandable.collapsed {
+  max-height: 950px; /* 6개 이미지 높이에 맞게 조정 */
+}
+
+.gallery-expandable.expanded {
+  max-height: 3000px; /* 충분히 크게 설정 */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  grid-gap: 2px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2px;
+}

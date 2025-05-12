@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Parisienne&display=swap');
+
+.section-main {
+    width: 100%;
+    aspect-ratio: 393/428;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-main .overlap-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.section-main .image-title {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+}
+
+.section-main .title-endless-love {
+    width: 92%;
+    max-width: 362px;
+    position: absolute;
+    left: 4%;
+    bottom: 10%;
+    object-fit: cover;
+}
+
+.section-main .text-main {
+    width: 88%;
+    max-width: 346px;
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-main .text-wrapper,
+.section-main .div,
+.section-main .text-wrapper-2,
+.section-main .text-wrapper-3,
+.section-main .text-wrapper-4 {
+    color: #9d2428;
+    font-family: "Bodoni Moda", Helvetica;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    min-width: 18px;
+}
+
+.section-main .text-wrapper {
+    left: 74%;
+    top: 49%;
+    width: 7%;
+}
+
+.section-main .div {
+    left: 15%;
+    top: 49%;
+    width: 10%;
+}
+
+.section-main .text-wrapper-2 {
+    left: 81%;
+    top: 0;
+    width: 7%;
+}
+
+.section-main .text-wrapper-3 {
+    left: 45%;
+    top: 0;
+    width: 12%;
+}
+
+.section-main .text-wrapper-4 {
+    left: 0;
+    top: 0;
+    width: 6%;
+}
+
+@media (max-width: 480px) {
+  .section-main {
+    max-width: 100vw;
+    aspect-ratio: 393/428;
+  }
+  .section-main .title-endless-love {
+    left: 2vw;
+    bottom: 8vw;
+    max-width: 90vw;
+  }
+  .section-main .text-main {
+    left: 5vw;
+    width: 90vw;
+    max-width: 95vw;
+  }
+  .section-main .text-wrapper,
+  .section-main .div,
+  .section-main .text-wrapper-2,
+  .section-main .text-wrapper-3,
+  .section-main .text-wrapper-4 {
+    font-size: 0.95rem;
+    min-width: 14px;
+  }
+}

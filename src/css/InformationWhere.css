@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400&display=swap');
+
+.information-where {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 394px;
+    height: auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.info-media-area {
+  position: relative;
+  width: 100%;
+  max-width: 266px;
+  aspect-ratio: 266/277;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.info-main-img {
+    width: 100%;
+    max-width: 266px;
+    height: auto;
+    max-height: 100%;
+    flex-shrink: 0;
+    display: block;
+    object-fit: contain;
+}
+
+.info-music-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: auto;
+  position: static;
+}
+
+.info-play-btn {
+  width: 20px;
+  height: 25px;
+}
+
+.info-lovesong-img {
+  width: 99px;
+  height: px;
+}
+
+.info-family-area {
+    display: flex;
+    width: 100%;
+    max-width: 216px;
+    height: auto;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.info-emoji {
+    display: flex;
+    width: 44px;
+    height: 77px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 17.533px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.info-family-text {
+    color: #000;
+    font-family: "Source Serif Pro";
+    font-size: 11.579px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33.082px; /* 285.714% */
+}
