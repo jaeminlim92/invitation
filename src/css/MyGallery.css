@@ -5,7 +5,6 @@
 
 .photo {
   position: absolute;
-
   left: 50%;
   transform: translateX(-50%); /* 가로 중앙 정렬 */
   font-size: 60px;
@@ -20,6 +19,8 @@
   transform: translateX(-20%); /* 가로 중앙 정렬 */
   text-transform: capitalize;
   text-align: center; /* 텍스트 가로 정렬 */
+  font-size: 64px;
+  font-family: 'Pinyon Script', serif;
 }
 
 .textPhoto {
@@ -27,6 +28,7 @@
   position: relative;
   height: 122px;
   text-align: center;
+  color: #7f0f13;
 }
 
 .notice {

@@ -11,6 +11,7 @@ function InformationWhere() {
 
   const handleVisibilityChange = () => {
     const audio = audioRef.current
+    audio.volume = 0.5
     if (document.hidden) {
       audio.pause()
       setIsPlaying(false)
