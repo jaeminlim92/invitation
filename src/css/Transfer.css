@@ -6,3 +6,24 @@
 .account-section {
   margin-bottom: 30px;
 }
+
+.account-title {
+  padding-top: 20px;
+  position: relative;
+  text-align: center;
+  font-size: 64px;
+  color: #7f0f13;
+  font-family: 'Pinyon Script', serif;
+}
+
+.account-notice {
+  position: relative;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', serif;
+  color: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}

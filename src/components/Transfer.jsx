@@ -1,13 +1,13 @@
 import Dropdown from './Dropdown'
 import '../css/Transfer.css'
 import bride from '../assets/images/bride.png'
+import React from 'react'
 
 function Transfer() {
   return (
     <>
-      <div className="title">
-        <ul>마음 전하실 곳</ul>
-      </div>
+      <div className="account-title">Account Info</div>
+      <div className="account-notice">축하의 마음은 감사히 받겠습니다.</div>
       <div className="transfer-container">
         <div className="account-section">
           <Dropdown

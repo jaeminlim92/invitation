@@ -27,13 +27,10 @@
   position: relative;
   height: 122px;
   text-align: center;
-  font-size: 64px;
-  color: #7f0f13;
-  font-family: 'Pinyon Script', serif;
 }
 
 .notice {
-   position: relative;
+  position: relative;
   font-size: 14px;
   font-family: 'Noto Sans KR';
   color: #000;

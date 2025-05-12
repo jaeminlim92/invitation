@@ -1,17 +1,17 @@
 .container {
   display: flex;
-  flex-direction: column;  /* 텍스트와 지도를 수직 정렬 */
+  flex-direction: column; /* 텍스트와 지도를 수직 정렬 */
   justify-content: center;
   align-items: center;
-  height: 100vh;  /* 전체 화면 중앙 정렬 */
-  width: 100vw;   /* 전체 화면 가득 차게 */
+  height: 100vh; /* 전체 화면 중앙 정렬 */
+  width: 100vw; /* 전체 화면 가득 차게 */
 }
 
 .title {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
-  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Bodoni Moda', sans-serif;
 }
 
 .title > ul {
@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0 0 3px;
   list-style: none;
-  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Bodoni Moda', sans-serif;
 }
 
 .content {
@@ -28,7 +28,7 @@
   text-align: center;
   margin: 0;
   list-style: none;
-  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Bodoni Moda', sans-serif;
 }
 
 
@@ -38,5 +38,5 @@
   margin: 0;
   padding: 0 0 5px;
   list-style: none;
-  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Bodoni Moda', sans-serif;
 }
