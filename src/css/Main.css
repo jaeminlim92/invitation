@@ -9,25 +9,26 @@
 
 .title {
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 10px;
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 .title > ul {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
   margin: 0;
   padding: 0 0 3px;
   list-style: none;
-  font-family: "../fonts/SeoulHangangM.ttf", serif;
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 .content {
   font-size: 13px;
   text-align: center;
   margin: 0;
-  padding: 0 0 5px;
   list-style: none;
-  font-family: "../fonts/SeoulHangangL.ttf", serif;
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 
@@ -37,5 +38,5 @@
   margin: 0;
   padding: 0 0 5px;
   list-style: none;
-  font-family: "../fonts/SeoulHangangL.ttf", serif;
+  font-family: 'Gowun Dodum', sans-serif;
 }

@@ -1,32 +1,36 @@
 .common-dropdown-wrapper {
   margin-bottom: 20px;
   border-radius: 4px;
-  font-family: sans-serif;
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 .common-dropdown-label {
-  background-color: #eaf6f8;
+  background-color: #eae4d9;
   padding: 12px 16px;
   font-weight: bold;
   cursor: pointer;
   display: flex;
-  border-radius: 4px 4px 0 0;
+  border-radius: 8px;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #bbb;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 .common-dropdown-content {
-  background-color: #f7fefe;
+  background-color: #f5f0e6;
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
+  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease, border 0.3s ease;
   padding: 0 16px;
-  border: 1px solid #cfe8eb;
+  border: 1px solid #ddd;
   border-top: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
-
 
 .gift-info-content {
   margin-bottom: 16px;
@@ -36,6 +40,15 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 6px;
+  color: inherit;
+}
+
+.common-dropdown-wrapper.groom .owner-info {
+  color: #0b0b0b;
+}
+
+.common-dropdown-wrapper.bride .owner-info {
+  color: #0b0b0b;
 }
 
 .account-info {
@@ -46,17 +59,18 @@
 }
 
 .account-info button {
+  color : #0b0b0b;
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 14px;
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 .account-info button:hover {
   background-color: #f3f3f3;
 }
-
 
 .arrow {
   font-size: 16px;
@@ -79,32 +93,50 @@
   text-align: center;
 }
 
-.common-dropdown-wrapper.bride.open .common-dropdown-content {
-  max-height: 1000px; /* sufficiently large to accommodate all content */
-  padding: 16px;
+.common-dropdown-wrapper.open .common-dropdown-content {
+  padding: 0;
+  max-height: 1000px;
+  /*padding: 16px;*/
   opacity: 1;
-}
-
-.common-dropdown-wrapper.bride .common-dropdown-label {
-  background-color: #ffe5ec;
-}
-
-.common-dropdown-wrapper.bride .common-dropdown-content {
-  border: 1px solid #f5a9c4;
-  background-color: #fff0f5;
+  border: 1px solid #bbb;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
 }
 
 .common-dropdown-wrapper.groom .common-dropdown-label {
-  background-color: #e0f7fa;
+  color: #0b0b0b;
 }
 
-.common-dropdown-wrapper.groom .common-dropdown-content {
-  border: 1px solid #b2ebf2;
-  background-color: #f0fefe;
+.common-dropdown-wrapper.bride .common-dropdown-label {
+  color: #0b0b0b;
 }
 
 .account-number {
   flex-grow: 1;
   margin-right: 12px;
   word-break: break-all;
+}
+
+.account-card {
+  padding: 16px;
+  border-bottom: 1px solid #bbb;;
+}
+
+.account-card:last-of-type {
+  border-bottom: none;
+}
+
+.common-dropdown-wrapper:not(.open) .common-dropdown-label {
+  border-radius: 8px;
+}
+
+.common-dropdown-wrapper.open .common-dropdown-label {
+  border-radius: 8px 8px 0 0;
+}
+
+.copy-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
 }
