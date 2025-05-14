@@ -19,6 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: -10px; /* 간격 줄이기 */
 }
 
 .info-main-img {
@@ -40,6 +41,7 @@
   width: 100%;
   height: auto;
   position: static;
+  margin-bottom: 10px; /* 간격 조정 */
 }
 
 .info-play-btn {
@@ -54,34 +56,76 @@
 .info-family-area {
   display: flex;
   width: 100%;
-  max-width: 216px;
+  max-width: 280px;
   height: auto;
   align-items: center;
-  gap: 4px;
+  gap: 15px;
   flex-shrink: 0;
+  margin-top: 10px; /* 간격 줄이기 */
+  margin-bottom: 30px; /* 아래 여백 추가 */
+  justify-content: center;
 }
 
 .info-emoji {
   display: flex;
-  width: 44px;
-  height: 77px;
+  width: 30px;
+  height: 65px;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-shrink: 0;
   color: #000;
   text-align: center;
   font-family: "Noto Sans KR";
-  font-size: 17.533px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1;
+  gap: 3px;
+}
+
+.info-emoji span {
+  display: block;
+  margin: 0;
+  height: 20px;
+  line-height: 20px;
 }
 
 .info-family-text {
   color: #000;
-  font-family: "Source Serif Pro";
-  font-size: 11.579px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 33.082px; /* 285.714% */
+  line-height: 24px;
+  width: 230px;
+}
+
+.family-row {
+  display: grid;
+  grid-template-columns: 110px 16px 30px 1fr;
+  align-items: center;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.parents {
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+.of {
+  text-align: center;
+  font-size: 13px;
+}
+
+.role {
+  text-align: center;
+  font-weight: 500;
+}
+
+.name {
+  text-align: right;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }

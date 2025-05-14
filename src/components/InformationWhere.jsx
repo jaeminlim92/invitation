@@ -82,16 +82,23 @@ function InformationWhere() {
       </div>
       <div className="info-family-area">
         <div className="info-emoji">
-          🤵🏻
-          <br />
-          🤍
-          <br />
-          👰🏻‍♀️
+          <span>🤵🏻</span>
+          <span>🤍</span>
+          <span>👰🏻‍♀️</span>
         </div>
         <div className="info-family-text">
-          임중섭 · 신계림 의 아들 임재민
-          <br />
-          전인수 · 송덕순 의 딸 전주현
+          <div className="family-row">
+            <span className="parents">임중섭 · 신계림</span>
+            <span className="of">의</span>
+            <span className="role">아들</span>
+            <span className="name">임재민</span>
+          </div>
+          <div className="family-row">
+            <span className="parents">전인수 · 송덕순</span>
+            <span className="of">의</span>
+            <span className="role">딸</span>
+            <span className="name">전주현</span>
+          </div>
         </div>
       </div>
     </section>
