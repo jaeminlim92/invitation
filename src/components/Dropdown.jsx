@@ -1,12 +1,12 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React, {useContext, useEffect, useRef, useState} from 'react'
 import copy from '../assets/images/copy.png'
 import '../css/Dropdown.css'
+import {ToastContext} from './Transfer'
 
 const Dropdown = ({title, accounts = [], variant = ''}) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [copiedAccount, setCopiedAccount] = useState('')
-  const [showToast, setShowToast] = useState(false)
   const contentRef = useRef()
+  const toastContext = useContext(ToastContext)
 
   useEffect(() => {
     if (isOpen && contentRef.current) {
@@ -20,9 +20,9 @@ const Dropdown = ({title, accounts = [], variant = ''}) => {
 
   const handleCopy = (accountNumber) => {
     navigator.clipboard.writeText(accountNumber)
-    setCopiedAccount(accountNumber)
-    setShowToast(true)
-    setTimeout(() => setShowToast(false), 2000) // 2초 후 사라짐
+    if (toastContext && toastContext.displayToast) {
+      toastContext.displayToast(accountNumber)
+    }
   }
 
   return (
@@ -31,40 +31,30 @@ const Dropdown = ({title, accounts = [], variant = ''}) => {
         {title}
         <span className="arrow">{isOpen ? '▲' : '▼'}</span>
       </div>
-      {showToast && (
-        <div className="toast-message">
-          계좌번호가 복사되었습니다.
-          <br />({copiedAccount})
-        </div>
-      )}
       <div
         className="common-dropdown-content"
         ref={contentRef}
         style={{
           maxHeight: isOpen ? contentRef.current?.scrollHeight + 'px' : '0px',
-          padding: isOpen ? '16px' : '0 16px',
           opacity: isOpen ? 1 : 0,
-          transition: 'max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease',
+          transition: 'max-height 0.4s ease, opacity 0.3s ease',
           overflow: 'hidden'
         }}
       >
         {accounts.map((account, index) => (
-          <div className={account.className || 'gift-info-content'} key={index}>
-            <div className="owner-info">
-              <strong>{account.role}</strong>
-            </div>
-            <div className="owner-info">
-              <strong>{account.owner}</strong>
-            </div>
-            <div className="account-info">
-              <div className="account-number">
-                {account.bank} {account.number}
+          <div className="account-info" key={index}>
+            <div className="account-details">
+              <div className="account-header">
+                <strong>{account.role}</strong>
+                <span className="owner">{account.owner}</span>
               </div>
-              <button onClick={() => handleCopy(account.number)}>
-                <img src={copy} alt="복사" className="copy-icon" />
-                복사
-              </button>
+              <div className="account-bank">{account.bank}</div>
+              <div className="account-number">{account.number}</div>
             </div>
+            <button onClick={() => handleCopy(account.bank + ' ' + account.number)}>
+              <img src={copy} alt="복사" className="copy-icon" />
+              복사
+            </button>
           </div>
         ))}
       </div>

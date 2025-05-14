@@ -1,142 +1,179 @@
 .common-dropdown-wrapper {
   margin-bottom: 20px;
-  border-radius: 4px;
-  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: transparent;
 }
 
 .common-dropdown-label {
-  background-color: #eae4d9;
-  padding: 12px 16px;
-  font-weight: bold;
+  background-color: #2d4a2d; /* 초록색 배경 */
+  color: white; /* 흰색 글자 */
+  padding: 14px 40px;
+  font-weight: 500;
   cursor: pointer;
   display: flex;
-  border-radius: 8px;
+  border-radius: 40px; /* 완전한 반원형 */
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #bbb;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   font-size: 16px;
-  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  height: 52px;
+  box-sizing: border-box;
+}
+
+.common-dropdown-label:hover {
+  background-color: #243d24;
 }
 
 .common-dropdown-content {
-  background-color: #f5f0e6;
+  background-color: #2d4a2d; /* 초록색 배경 */
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease, border 0.3s ease;
-  padding: 0 16px;
-  border: 1px solid #ddd;
-  border-top: none;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  padding: 0;
+  border: none;
+  border-radius: 0 0 40px 40px; /* 아래 모서리만 둥글게 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: -26px; /* 드롭다운 버튼과 겹치게 */
+  position: relative;
+  z-index: 1;
 }
 
-.gift-info-content {
-  margin-bottom: 16px;
+.common-dropdown-wrapper.open .common-dropdown-content {
+  max-height: 1000px;
+  opacity: 1;
+  margin-top: -26px;
+  padding: 26px 0 20px 0; /* 상단 패딩만 유지 */
 }
 
-.owner-info {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: inherit;
-}
-
-.common-dropdown-wrapper.groom .owner-info {
-  color: #0b0b0b;
-}
-
-.common-dropdown-wrapper.bride .owner-info {
-  color: #0b0b0b;
+.common-dropdown-wrapper.open .common-dropdown-label {
+  border-radius: 26px 26px 0 0; /* 열렸을 때 위쪽만 둥글게 */
+  box-shadow: none;
 }
 
 .account-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 40px;
+  background-color: transparent; /* 투명 배경 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 흰색 얇은 구분선 */
+  margin: 0;
+}
+
+.account-info:last-child {
+  border-bottom: none; /* 마지막 항목 구분선 제거 */
+  padding-bottom: 20px;
+}
+
+.account-info:first-child {
+  padding-top: 0;
+}
+
+.account-details {
+  font-size: 14px;
+  line-height: 1.6;
+  color: white; /* 흰색 글자 */
+  flex: 1;
+}
+
+.account-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.account-header strong {
+  font-weight: 600;
+  color: white; /* 흰색 글자 */
+}
+
+.account-header .owner {
+  color: white;
+  font-weight: 500;
+}
+
+.account-bank {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.account-number {
   font-size: 15px;
+  color: white;
+  font-weight: 500;
 }
 
 .account-info button {
-  color : #0b0b0b;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 6px 12px;
-  border-radius: 4px;
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 8px 20px;
+  border-radius: 20px; /* 버튼도 둥글게 */
   font-size: 14px;
-  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+  margin-left: 20px; /* 텍스트와 버튼 사이 간격 */
+  flex-shrink: 0; /* 버튼 크기 고정 */
 }
 
 .account-info button:hover {
-  background-color: #f3f3f3;
+  background-color: #eee;
 }
 
 .arrow {
-  font-size: 16px;
+  font-size: 12px;
+  color: white;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .toast-message {
-  font-size: 12px;
-  position: fixed;
-  top: 20px;
+  font-size: 14px;
+  position: absolute; /* fixed에서 absolute로 변경 */
+  top: 100px; /* Account Info 제목 아래 위치 */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff;
-  border: 1px solid #4caf50;
-  color: #2e7d32;
-  padding: 12px 20px;
-  border-radius: 8px;
+  background-color: #2d4a2d; /* 초록색 배경으로 변경 */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 24px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   z-index: 999;
   font-weight: 500;
   text-align: center;
+  animation: fadeInOut 2s ease-in-out;
 }
 
-.common-dropdown-wrapper.open .common-dropdown-content {
-  padding: 0;
-  max-height: 1000px;
-  /*padding: 16px;*/
-  opacity: 1;
-  border: 1px solid #bbb;
-  border-top: none;
-  border-radius: 0 0 12px 12px;
-}
-
-.common-dropdown-wrapper.groom .common-dropdown-label {
-  color: #0b0b0b;
-}
-
-.common-dropdown-wrapper.bride .common-dropdown-label {
-  color: #0b0b0b;
-}
-
-.account-number {
-  flex-grow: 1;
-  margin-right: 12px;
-  word-break: break-all;
-}
-
-.account-card {
-  padding: 16px;
-  border-bottom: 1px solid #bbb;;
-}
-
-.account-card:last-of-type {
-  border-bottom: none;
-}
-
-.common-dropdown-wrapper:not(.open) .common-dropdown-label {
-  border-radius: 8px;
-}
-
-.common-dropdown-wrapper.open .common-dropdown-label {
-  border-radius: 8px 8px 0 0;
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
 }
 
 .copy-icon {
   width: 16px;
   height: 16px;
-  margin-right: 4px;
-  vertical-align: middle;
 }

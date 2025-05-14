@@ -1,6 +1,9 @@
 .transfer-container {
   padding: 20px;
   text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative; /* 토스트 메시지 위치 참조점 */
 }
 
 .account-section {
@@ -11,8 +14,8 @@
   padding-top: 20px;
   position: relative;
   text-align: center;
-  font-size: 64px;
-  color: #7f0f13;
+  font-size: 48px;
+  color: #9d2428;
   font-family: 'Pinyon Script', serif;
 }
 
@@ -25,5 +28,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20px;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.duck-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.duck-image {
+  width: 100%; /* 120px에서 250px로 증가 */
+  height: auto;
+  display: inline-block;
 }
