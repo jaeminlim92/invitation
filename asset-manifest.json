@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/invitation/static/css/main.aca8578f.css",
-    "main.js": "/invitation/static/js/main.2d92e90b.js",
+    "main.css": "/invitation/static/css/main.b140ef6a.css",
+    "main.js": "/invitation/static/js/main.dfc778d9.js",
     "static/js/453.21be8fb1.chunk.js": "/invitation/static/js/453.21be8fb1.chunk.js",
     "static/media/SeoulHangangL.ttf": "/invitation/static/media/SeoulHangangL.27a6ebafbb841862ecfa.ttf",
     "static/media/SeoulHangangM.ttf": "/invitation/static/media/SeoulHangangM.39f5472180c87ee602e0.ttf",
     "static/media/SeoulHangangEB.ttf": "/invitation/static/media/SeoulHangangEB.15abaf393928b11c50bc.ttf",
     "static/media/SeoulHangangB.ttf": "/invitation/static/media/SeoulHangangB.824e841e32a4c5ed9965.ttf",
-    "static/media/Photo1.png": "/invitation/static/media/Photo1.a44426887313889e6db7.png",
-    "static/media/Photo2.png": "/invitation/static/media/Photo2.4f8960eb68415166cfa9.png",
     "static/media/Flower.mp3": "/invitation/static/media/Flower.d39fc8ca5a820f985a8e.mp3",
     "static/media/wedding-info-carmera.png": "/invitation/static/media/wedding-info-carmera.2b591e170648dcd38895.png",
     "static/media/photo2.jpg": "/invitation/static/media/photo2.d03b9abd0e628850e246.jpg",
     "static/media/image_title.png": "/invitation/static/media/image_title.3ed10fd7f9965e59184d.png",
-    "static/media/Comic_Photo.png": "/invitation/static/media/Comic_Photo.5dd0d6220abb8bef28fd.png",
+    "static/media/Comic_Photo.png": "/invitation/static/media/Comic_Photo.fc199b759146d06dded1.png",
     "static/media/photo1.jpg": "/invitation/static/media/photo1.5ef16db947cd79f45bd7.jpg",
+    "static/media/Photo2.png": "/invitation/static/media/Photo2.ce99cda37c11d09513ed.png",
+    "static/media/Photo1.png": "/invitation/static/media/Photo1.2577f653aabd1ddd8b0e.png",
     "static/media/love_song_component.gif": "/invitation/static/media/love_song_component.9199d8583f47e5862dac.gif",
     "static/media/heart_frame.png": "/invitation/static/media/heart_frame.468d2e1aee5adb35a815.png",
     "static/media/angel_photo.png": "/invitation/static/media/angel_photo.12625d9a87dd483a3cfc.png",
@@ -23,12 +23,12 @@
     "static/media/T_map.svg": "/invitation/static/media/T_map.f5bb648e9667e28f4c0c7e622c3c9c46.svg",
     "index.html": "/invitation/index.html",
     "static/media/kakao_navi.svg": "/invitation/static/media/kakao_navi.058633a7f6b8fa4f4b7a50694c537f88.svg",
-    "main.aca8578f.css.map": "/invitation/static/css/main.aca8578f.css.map",
-    "main.2d92e90b.js.map": "/invitation/static/js/main.2d92e90b.js.map",
+    "main.b140ef6a.css.map": "/invitation/static/css/main.b140ef6a.css.map",
+    "main.dfc778d9.js.map": "/invitation/static/js/main.dfc778d9.js.map",
     "453.21be8fb1.chunk.js.map": "/invitation/static/js/453.21be8fb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aca8578f.css",
-    "static/js/main.2d92e90b.js"
+    "static/css/main.b140ef6a.css",
+    "static/js/main.dfc778d9.js"
   ]
 }
