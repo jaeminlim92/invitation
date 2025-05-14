@@ -64,10 +64,8 @@ function Map() {
 
   return (
     <div>
-      <div className="title">
-        <ul>오시는 길</ul>
-      </div>
       <div className="content" style={{textAlign: 'left'}}>
+        <ul></ul>
         <ul>서울 동대문구 회기로 56</ul>
         <ul>세종대왕 기념관</ul>
       </div>
@@ -90,25 +88,25 @@ function Map() {
           href={`tmap://route?goalname=세종대왕 기념관&goalx=${coordinates.longitude}&goaly=${coordinates.latitude}`}
           style={navButtonStyle}
         >
-          <img src={tmap} alt="티맵" style={{width: '16px', height: '16px'}} />
+          <img src={tmap} alt="티맵" className="map-button" />
           티맵
         </a>
         <a
           href={`https://map.kakao.com/link/to/세종대왕기념관,37.59074398064007,127.04359231098572`}
           style={navButtonStyle}
         >
-          <img src={kakao} alt="카카오" style={{width: '16px', height: '16px'}} />
+          <img src={kakao} alt="카카오" className="map-button" />
           카카오
         </a>
         <a
           href={`nmap://route/car?dname=세종대왕 기념관&dlat=${coordinates.latitude}&dlng=${coordinates.longitude}`}
           style={navButtonStyle}
         >
-          <img src={naver} alt="네이버" style={{width: '16px', height: '16px'}} />
+          <img src={naver} alt="네이버" className="map-button" />
           네이버
         </a>
       </div>
-      <div className="content" style={{textAlign: 'left', paddingLeft: '20px'}}>
+      <div className="content" style={{textAlign: 'left', paddingLeft: '20px', paddingTop: '20px'}}>
         <h3>🚌 셔틀버스</h3>
         <p>
           <strong style={{color: '#0303a5'}}>1호선</strong> 청량리역 하차 2번출구
@@ -116,6 +114,7 @@ function Map() {
         <p>
           <strong style={{color: '#772c00'}}>6호선</strong> 고려대역 하차 3번출구 앞
         </p>
+        <p>&nbsp;</p>
 
         <h3>🚇 지하철</h3>
         <p>
@@ -124,6 +123,7 @@ function Map() {
         <p>
           <strong style={{color: '#772c00'}}>6호선</strong> 고려대역 3번출구 도보 5분 거리
         </p>
+        <p>&nbsp;</p>
 
         <h3>🚌 버스</h3>
         <p>세종대왕기념관 정류장 하차</p>

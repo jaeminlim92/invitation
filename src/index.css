@@ -1,32 +1,59 @@
+/* Google Fonts - 중복 제거 및 통합 */
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400&display=swap');
+
+/* 로컬 폰트 */
+@font-face {
+  font-family: 'SeoulHangangM';
+  src: url('./fonts/SeoulHangangM.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulHangangL';
+  src: url('./fonts/SeoulHangangL.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulHangangB';
+  src: url('./fonts/SeoulHangangB.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulHangangEB';
+  src: url('./fonts/SeoulHangangEB.ttf') format('truetype');
+}
 
 html {
   max-width: 100%;
   overflow-x: hidden;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    'sans-serif', 'Gowun Dodum';
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'sans-serif';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
   touch-action: manipulation;
   max-width: 100%;
   overflow-x: hidden;
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.HeaderSection {
-  height: calc(var(--vh, 1vh) * 100);
-}
-
-.HeaderSection img {
-  height: 100%;
+  monospace;
 }

@@ -6,8 +6,10 @@ import InformationWhere from './InformationWhere'
 import AngelPoem from './AngelPoem'
 import Photo1Section from './Photo1Section'
 import MyGallery from './MyGallery'
-import Map from './Map'
 import Transfer from './Transfer'
+import MeetAtWedding from './MeetAtWedding'
+import Footer from './Footer'
+import Map from './Map'
 
 function MobileInvitation() {
   return (
@@ -18,11 +20,11 @@ function MobileInvitation() {
         <AngelPoem />
         <Photo1Section />
         <MyGallery />
+        <MeetAtWedding />
         <Map />
         <Transfer />
+        <Footer />
       </div>
-      {/* <SectionWeddingInfo /> */}
-      {/* ...다른 섹션들 */}
     </div>
   )
 }

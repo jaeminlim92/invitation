@@ -88,10 +88,8 @@ const MyGallery = () => {
         </div>
       </div>
       {images.length > 6 && (
-        <div style={{ textAlign: 'center', marginTop: '10px' }}>
-          <button onClick={() => setShowAll(!showAll)}>
-            {showAll ? '접기' : '더보기'}
-          </button>
+        <div className="more-button" onClick={() => setShowAll(!showAll)}>
+            {showAll ? 'HIDDEN' : 'MORE'}
         </div>
       )}
     </Gallery>

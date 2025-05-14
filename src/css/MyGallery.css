@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
-
+.textPhoto {
+  width: 100%;
+  position: relative;
+  height: 122px;
+  text-align: center;
+  color: #7f0f13;
+}
 
 .photo {
   position: absolute;
@@ -14,21 +17,13 @@
 
 .gallery {
   position: absolute;
-  top: 35%; /* 상단에서 10% 위치 */
+  top: 35%; /* 상단에서 35% 위치 */
   left: 51%;
   transform: translateX(-20%); /* 가로 중앙 정렬 */
   text-transform: capitalize;
   text-align: center; /* 텍스트 가로 정렬 */
   font-size: 64px;
   font-family: 'Pinyon Script', serif;
-}
-
-.textPhoto {
-  width: 100%;
-  position: relative;
-  height: 122px;
-  text-align: center;
-  color: #7f0f13;
 }
 
 .notice {
@@ -64,11 +59,29 @@
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 0fr);
+  grid-template-columns: repeat(3, 0fr); /* 원래대로 0fr로 복구 */
   grid-gap: 2px;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 600px;
   margin: 0 auto 2px;
+}
+
+.more-button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 38px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #7F0F13;
+  text-align: center;
+  font-family: "Playfair Display SC", serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
 }
