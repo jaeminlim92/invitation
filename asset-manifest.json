@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/invitation/static/css/main.e618522a.css",
-    "main.js": "/invitation/static/js/main.193aa669.js",
+    "main.css": "/invitation/static/css/main.92a17a79.css",
+    "main.js": "/invitation/static/js/main.9a385842.js",
     "static/js/453.21be8fb1.chunk.js": "/invitation/static/js/453.21be8fb1.chunk.js",
     "static/media/Photo1.png": "/invitation/static/media/Photo1.a44426887313889e6db7.png",
     "static/media/Photo2.png": "/invitation/static/media/Photo2.4f8960eb68415166cfa9.png",
@@ -12,18 +12,19 @@
     "static/media/image_title.png": "/invitation/static/media/image_title.3ed10fd7f9965e59184d.png",
     "static/media/photo1.jpg": "/invitation/static/media/photo1.5ef16db947cd79f45bd7.jpg",
     "static/media/love_song_component.gif": "/invitation/static/media/love_song_component.9199d8583f47e5862dac.gif",
+    "static/media/heart_frame.png": "/invitation/static/media/heart_frame.468d2e1aee5adb35a815.png",
     "static/media/angel_photo.png": "/invitation/static/media/angel_photo.12625d9a87dd483a3cfc.png",
     "static/media/background.png": "/invitation/static/media/background.59109e281cb9701372b1.png",
     "static/media/bride.png": "/invitation/static/media/bride.020a16cc7f6f7bb12f14.png",
     "static/media/T_map.svg": "/invitation/static/media/T_map.f5bb648e9667e28f4c0c7e622c3c9c46.svg",
     "index.html": "/invitation/index.html",
     "static/media/kakao_navi.svg": "/invitation/static/media/kakao_navi.058633a7f6b8fa4f4b7a50694c537f88.svg",
-    "main.e618522a.css.map": "/invitation/static/css/main.e618522a.css.map",
-    "main.193aa669.js.map": "/invitation/static/js/main.193aa669.js.map",
+    "main.92a17a79.css.map": "/invitation/static/css/main.92a17a79.css.map",
+    "main.9a385842.js.map": "/invitation/static/js/main.9a385842.js.map",
     "453.21be8fb1.chunk.js.map": "/invitation/static/js/453.21be8fb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e618522a.css",
-    "static/js/main.193aa669.js"
+    "static/css/main.92a17a79.css",
+    "static/js/main.9a385842.js"
   ]
 }
