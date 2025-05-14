@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/invitation/static/css/main.73a7ddaf.css",
-    "main.js": "/invitation/static/js/main.60ea416f.js",
+    "main.css": "/invitation/static/css/main.e7a25c2a.css",
+    "main.js": "/invitation/static/js/main.34e17e25.js",
     "static/js/453.21be8fb1.chunk.js": "/invitation/static/js/453.21be8fb1.chunk.js",
     "static/media/SeoulHangangL.ttf": "/invitation/static/media/SeoulHangangL.27a6ebafbb841862ecfa.ttf",
     "static/media/SeoulHangangM.ttf": "/invitation/static/media/SeoulHangangM.39f5472180c87ee602e0.ttf",
@@ -22,12 +22,12 @@
     "static/media/T_map.svg": "/invitation/static/media/T_map.f5bb648e9667e28f4c0c7e622c3c9c46.svg",
     "index.html": "/invitation/index.html",
     "static/media/kakao_navi.svg": "/invitation/static/media/kakao_navi.058633a7f6b8fa4f4b7a50694c537f88.svg",
-    "main.73a7ddaf.css.map": "/invitation/static/css/main.73a7ddaf.css.map",
-    "main.60ea416f.js.map": "/invitation/static/js/main.60ea416f.js.map",
+    "main.e7a25c2a.css.map": "/invitation/static/css/main.e7a25c2a.css.map",
+    "main.34e17e25.js.map": "/invitation/static/js/main.34e17e25.js.map",
     "453.21be8fb1.chunk.js.map": "/invitation/static/js/453.21be8fb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.73a7ddaf.css",
-    "static/js/main.60ea416f.js"
+    "static/css/main.e7a25c2a.css",
+    "static/js/main.34e17e25.js"
   ]
 }
