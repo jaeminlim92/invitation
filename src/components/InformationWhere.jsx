@@ -3,65 +3,63 @@ import playButton from '../assets/images/wedding-info/play_button.png'
 import loveSong from '../assets/media/love_song_component.gif'
 import frame10Img from '../assets/images/wedding-info/wedding-info-carmera.png' // Frame 10의 이미지로 교체 필요
 import pauseButton from '../assets/images/wedding-info/pause_button.png'
+import Flower from '../assets/media/Flower.mp3'
 import '../css/InformationWhere.css'
 
 function InformationWhere() {
   const [isPlaying, setIsPlaying] = React.useState(false)
-  const audioRef = React.useRef(new Audio(require('../assets/media/Flower.mp3')))
-
-  const handleVisibilityChange = () => {
-    const audio = audioRef.current
-    audio.volume = 0.5
-    if (document.hidden) {
-      audio.pause()
-      setIsPlaying(false)
-    } else {
-      audio.play().then(() => setIsPlaying(true))
-    }
-  }
-
-  document.addEventListener('visibilitychange', handleVisibilityChange)
+  const audioRef = React.useRef(null)
+  const isPlayingRef = React.useRef(false) // isPlaying 상태를 추적하기 위한 ref
 
   React.useEffect(() => {
-    const audio = audioRef.current
-    audio.loop = true
+    // Audio 객체를 useEffect 안에서 생성
+    audioRef.current = new Audio(Flower)
+    audioRef.current.loop = true
+    audioRef.current.volume = 0.5
 
-    const tryPlay = () => {
-      audio
-        .play()
-        .then(() => setIsPlaying(true))
-        .catch((err) => {
-          console.log('Autoplay blocked:', err)
-        })
+    const handleVisibilityChange = () => {
+      const audio = audioRef.current
+      if (document.hidden) {
+        // 화면이 숨겨질 때 재생 중이었다면 일시정지
+        if (isPlayingRef.current) {
+          audio.pause()
+          setIsPlaying(false)
+          isPlayingRef.current = false
+        }
+      }
     }
 
-    // Allow playback on user interaction
-    const unlockAudio = () => {
-      tryPlay()
-      window.removeEventListener('click', unlockAudio)
-    }
-
-    window.addEventListener('click', unlockAudio)
+    document.addEventListener('visibilitychange', handleVisibilityChange)
 
     return () => {
-      audio.pause()
-      audio.currentTime = 0
-      setIsPlaying(false)
-      window.removeEventListener('click', unlockAudio)
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current.currentTime = 0
+      }
       document.removeEventListener('visibilitychange', handleVisibilityChange)
     }
   }, [])
 
   const handlePlayPause = () => {
     const audio = audioRef.current
+
+    if (!audio) return
+
     if (!isPlaying) {
       audio
         .play()
-        .then(() => setIsPlaying(true))
-        .catch(console.error)
+        .then(() => {
+          setIsPlaying(true)
+          isPlayingRef.current = true
+        })
+        .catch((error) => {
+          console.error('Failed to play audio:', error)
+          // 에러가 발생해도 UI는 업데이트하지 않음
+        })
     } else {
       audio.pause()
       setIsPlaying(false)
+      isPlayingRef.current = false
     }
   }
 
