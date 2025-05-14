@@ -1,14 +1,13 @@
 {
   "files": {
     "main.css": "/invitation/static/css/main.37228b9e.css",
-    "main.js": "/invitation/static/js/main.4f9fa586.js",
+    "main.js": "/invitation/static/js/main.d38cd933.js",
     "static/js/453.21be8fb1.chunk.js": "/invitation/static/js/453.21be8fb1.chunk.js",
     "static/media/SeoulHangangL.ttf": "/invitation/static/media/SeoulHangangL.27a6ebafbb841862ecfa.ttf",
     "static/media/SeoulHangangM.ttf": "/invitation/static/media/SeoulHangangM.39f5472180c87ee602e0.ttf",
     "static/media/SeoulHangangEB.ttf": "/invitation/static/media/SeoulHangangEB.15abaf393928b11c50bc.ttf",
     "static/media/SeoulHangangB.ttf": "/invitation/static/media/SeoulHangangB.824e841e32a4c5ed9965.ttf",
     "static/media/Flower.mp3": "/invitation/static/media/Flower.d39fc8ca5a820f985a8e.mp3",
-    "static/media/wedding-info-carmera.png": "/invitation/static/media/wedding-info-carmera.2b591e170648dcd38895.png",
     "static/media/photo2.jpg": "/invitation/static/media/photo2.d03b9abd0e628850e246.jpg",
     "static/media/image_title.png": "/invitation/static/media/image_title.3ed10fd7f9965e59184d.png",
     "static/media/Comic_Photo.png": "/invitation/static/media/Comic_Photo.f1c08160253a4a3de84c.png",
@@ -19,15 +18,16 @@
     "static/media/heart_frame.png": "/invitation/static/media/heart_frame.468d2e1aee5adb35a815.png",
     "static/media/angel_photo.png": "/invitation/static/media/angel_photo.12625d9a87dd483a3cfc.png",
     "static/media/background.png": "/invitation/static/media/background.59109e281cb9701372b1.png",
+    "static/media/wedding-info-carmera.png": "/invitation/static/media/wedding-info-carmera.4df2b76cdd202f1a7bd8.png",
     "static/media/T_map.svg": "/invitation/static/media/T_map.f5bb648e9667e28f4c0c7e622c3c9c46.svg",
     "index.html": "/invitation/index.html",
     "static/media/kakao_navi.svg": "/invitation/static/media/kakao_navi.058633a7f6b8fa4f4b7a50694c537f88.svg",
     "main.37228b9e.css.map": "/invitation/static/css/main.37228b9e.css.map",
-    "main.4f9fa586.js.map": "/invitation/static/js/main.4f9fa586.js.map",
+    "main.d38cd933.js.map": "/invitation/static/js/main.d38cd933.js.map",
     "453.21be8fb1.chunk.js.map": "/invitation/static/js/453.21be8fb1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.37228b9e.css",
-    "static/js/main.4f9fa586.js"
+    "static/js/main.d38cd933.js"
   ]
 }
