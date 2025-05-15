@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/invitation/static/css/main.c3ae7e01.css",
-    "main.js": "/invitation/static/js/main.15e935ce.js",
+    "main.js": "/invitation/static/js/main.476e024a.js",
     "static/js/453.21be8fb1.chunk.js": "/invitation/static/js/453.21be8fb1.chunk.js",
     "static/media/SeoulHangangL.ttf": "/invitation/static/media/SeoulHangangL.27a6ebafbb841862ecfa.ttf",
     "static/media/SeoulHangangM.ttf": "/invitation/static/media/SeoulHangangM.39f5472180c87ee602e0.ttf",
     "static/media/SeoulHangangEB.ttf": "/invitation/static/media/SeoulHangangEB.15abaf393928b11c50bc.ttf",
     "static/media/SeoulHangangB.ttf": "/invitation/static/media/SeoulHangangB.824e841e32a4c5ed9965.ttf",
+    "static/media/Comic_Photo.jpg": "/invitation/static/media/Comic_Photo.7809224cb9a43ce165e8.jpg",
+    "static/media/Photo2.jpg": "/invitation/static/media/Photo2.3b16376f558f7a49e158.jpg",
     "static/media/Flower.mp3": "/invitation/static/media/Flower.d39fc8ca5a820f985a8e.mp3",
+    "static/media/Photo1.jpg": "/invitation/static/media/Photo1.976211154ec5c9dcd8ed.jpg",
     "static/media/photo2.jpg": "/invitation/static/media/photo2.d03b9abd0e628850e246.jpg",
     "static/media/image_title.png": "/invitation/static/media/image_title.3ed10fd7f9965e59184d.png",
-    "static/media/Comic_Photo.png": "/invitation/static/media/Comic_Photo.f1c08160253a4a3de84c.png",
     "static/media/photo1.jpg": "/invitation/static/media/photo1.5ef16db947cd79f45bd7.jpg",
-    "static/media/Photo2.png": "/invitation/static/media/Photo2.ce99cda37c11d09513ed.png",
-    "static/media/Photo1.png": "/invitation/static/media/Photo1.2577f653aabd1ddd8b0e.png",
     "static/media/love_song_component.gif": "/invitation/static/media/love_song_component.9199d8583f47e5862dac.gif",
     "static/media/heart_frame.png": "/invitation/static/media/heart_frame.468d2e1aee5adb35a815.png",
     "static/media/angel_photo.png": "/invitation/static/media/angel_photo.12625d9a87dd483a3cfc.png",
@@ -24,11 +24,11 @@
     "index.html": "/invitation/index.html",
     "static/media/kakao_navi.svg": "/invitation/static/media/kakao_navi.058633a7f6b8fa4f4b7a50694c537f88.svg",
     "main.c3ae7e01.css.map": "/invitation/static/css/main.c3ae7e01.css.map",
-    "main.15e935ce.js.map": "/invitation/static/js/main.15e935ce.js.map",
+    "main.476e024a.js.map": "/invitation/static/js/main.476e024a.js.map",
     "453.21be8fb1.chunk.js.map": "/invitation/static/js/453.21be8fb1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3ae7e01.css",
-    "static/js/main.15e935ce.js"
+    "static/js/main.476e024a.js"
   ]
 }
