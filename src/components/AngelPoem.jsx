@@ -1,26 +1,44 @@
-import React from "react";
-import "../css/AngelPoem.css";
+import React from 'react'
+import '../css/AngelPoem.css'
+import angelPhoto from '../assets/images/wedding-info/angel_photo.jpg'
 
 const AngelPoem = () => {
   return (
     <div className="angel-poem-main">
       <div className="angel-poem-main-overlap-group">
         <div className="poem-area">
-            우리를 위해서 작성되어진 축하의 시를 <br />
-            이 공간에서 보여주려고 글자를 써서 <br />
-            배치를 먼저 해보았어요.<br />
-            <br />
-            어쩌구 저쩌구 하고싶은 말이 있으면<br />
-            더 여기다가 남겨야 한다는 사실!<br />
-            <br />
-            사랑을 담아<br />
-            임재민, 전주현 드림
+          생각만으로힘이 되는 사람을 만났습니다.
+          <br />
+          <br />
+          서로를 떠올리는 마음이계절을 지나
+          <br />
+          사랑이 되었고그 사랑으로 평생을 약속하려 합니다.
+          <br />
+          <br />
+          저희 두 사람의 삶을다정히 비춰준 당신께,
+          <br />
+          <br />
+          나란히 적은 이름 끝에설렘을 담아 이 초대를 띄웁니다.
+          <br />
+          <br />
+          햇살이 마음을 닮은 날,
+          <br />
+          임재민, 전주현 드림
+        </div>
+        <div className="angel-photo-container">
+          <img
+            src={angelPhoto}
+            alt="Wedding"
+            className="angel-photo"
+            onContextMenu={(e) => e.preventDefault()}
+            draggable="false"
+          />
         </div>
         <div className="all-forever">
           ALL<span className="sub-title">(the little)</span>Forever
         </div>
       </div>
-  </div>
-  );
+    </div>
+  )
 }
-export default AngelPoem;
+export default AngelPoem

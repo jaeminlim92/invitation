@@ -1,7 +1,7 @@
 import Dropdown from './Dropdown'
 import '../css/Transfer.css'
-import React, { useState, createContext, useContext } from 'react'
-import duckImage from '../assets/images/duck.png'
+import React, {createContext, useState} from 'react'
+import duckImage from '../assets/images/duck.jpg'
 
 // Toast Context 생성
 export const ToastContext = createContext()
@@ -17,15 +17,13 @@ function Transfer() {
   }
 
   return (
-    <ToastContext.Provider value={{ displayToast }}>
-      <div style={{ position: 'relative' }}>
+    <ToastContext.Provider value={{displayToast}}>
+      <div style={{position: 'relative'}}>
         <div className="account-title">Account Info</div>
         <div className="account-notice">축하해주시는 따뜻한 마음, 감사히 받겠습니다.</div>
 
         {showToast && (
-          <div className="toast-message">
-            {copiedAccount ? `${copiedAccount} 복사되었습니다.` : '복사되었습니다.'}
-          </div>
+          <div className="toast-message">{copiedAccount ? `${copiedAccount} 복사되었습니다.` : '복사되었습니다.'}</div>
         )}
 
         <div className="transfer-container">

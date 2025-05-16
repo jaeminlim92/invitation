@@ -1,62 +1,73 @@
 .angel-poem-main {
-    width: 100%;
-    aspect-ratio: 393/598;
-    overflow: hidden;
-    margin: 0 auto;
-    position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* 텍스트 선택 방지 - 기본적인 방식만 적용 */
+  -webkit-touch-callout: none; /* iOS Safari */
 }
 
 .angel-poem-main-overlap-group {
-    background-image: url('../assets/images/wedding-info/angel_photo.png');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.angel-poem-main-photo-group {
-    background-image: url('../assets/images/background.png');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.angel-poem-main .image-title {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0; top: 0;
+  background-color: #852414;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 20px 0 10px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 .poem-area {
-    position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 14px;
-    color: #fff;
-    text-align: center;
-    line-height: 1.7;
-    padding-top: 20px;
-  }
+  position: relative;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto 5px auto;
+  /* 모바일에서 꾹 눌렀을 때 복사 방지 */
+  -webkit-touch-callout: none;
+}
+
+.angel-photo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: -10px 0;
+}
+
+.angel-photo {
+  max-width: 80%;
+  height: auto;
+  /* 이미지 꾹 눌러서 저장 방지 */
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+}
 
 .all-forever {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    font-family: "Playfair Display";
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #FFF;
+  text-align: center;
+  width: 100%;
+  font-family: "Playfair Display";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FFF;
+  margin: 0;
+  /* 모바일에서 꾹 눌렀을 때 복사 방지 */
+  -webkit-touch-callout: none;
 }
 
 .all-forever .sub-title {
-    font-family: 'Pinyon Script';
-    color: #fff;
-    margin: 0 8px;
-  }
+  font-family: 'Pinyon Script';
+  color: #fff;
+  margin: 0 8px;
+}

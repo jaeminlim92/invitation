@@ -1,8 +1,8 @@
-import React from "react";
-import photo1 from "../assets/images/Photo1.png";
-import photo2 from "../assets/images/Photo2.png";
-import photo3 from "../assets/images/Comic_Photo.png";
-import "../css/Photo1Section.css";
+import React from 'react'
+import photo1 from '../assets/images/Photo1.jpg'
+import photo2 from '../assets/images/Photo2.jpg'
+import photo3 from '../assets/images/Comic_Photo.jpg'
+import '../css/Photo1Section.css'
 
 const Photo1Section = () => {
   return (
@@ -11,6 +11,6 @@ const Photo1Section = () => {
       <img className="photo" src={photo2} alt="photo2" />
       <img className="photo" src={photo3} alt="photo3" />
     </div>
-  );
+  )
 }
-export default Photo1Section;
+export default Photo1Section

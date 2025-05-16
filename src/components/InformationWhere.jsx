@@ -1,7 +1,7 @@
 import React from 'react'
 import playButton from '../assets/images/wedding-info/play_button.png'
 import loveSong from '../assets/media/love_song_component.gif'
-import frame10Img from '../assets/images/wedding-info/wedding-info-carmera.png' // Frame 10의 이미지로 교체 필요
+import frame10Img from '../assets/images/wedding-info/wedding-info-carmera.jpg' // Frame 10의 이미지로 교체 필요
 import pauseButton from '../assets/images/wedding-info/pause_button.png'
 import Flower from '../assets/media/Flower.mp3'
 import '../css/InformationWhere.css'
@@ -15,7 +15,7 @@ function InformationWhere() {
     // Audio 객체를 useEffect 안에서 생성
     audioRef.current = new Audio(Flower)
     audioRef.current.loop = true
-    audioRef.current.volume = 0.5
+    audioRef.current.volume = 0.3
 
     const handleVisibilityChange = () => {
       const audio = audioRef.current
@@ -96,7 +96,7 @@ function InformationWhere() {
           <div className="family-row">
             <span className="parents">전인수 · 송덕순</span>
             <span className="of">의</span>
-            <span className="role">딸</span>
+            <span className="role">&nbsp;&nbsp;&nbsp;&nbsp;딸</span>
             <span className="name">전주현</span>
           </div>
         </div>
