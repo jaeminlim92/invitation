@@ -22,7 +22,8 @@
   margin: 0 auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  transition: max-width 0.3s ease; /* 부드러운 전환 효과 추가 */
+  transition: max-width 0.3s ease;
+  gap: 0; /* 섹션 간 간격 0으로 설정 */
 }
 
 /* 모바일 화면에 대한 미디어 쿼리 */

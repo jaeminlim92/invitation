@@ -54,7 +54,13 @@ function Transfer() {
             <Dropdown
               title="신부 측 계좌번호"
               accounts={[
-                {role: '신부', owner: '전주현', bank: '우리은행', number: '1002-345-678901', className: 'account-card'},
+                {
+                  role: '신부',
+                  owner: '전주현',
+                  bank: '카카오뱅크',
+                  number: '3333-01-4297264',
+                  className: 'account-card'
+                },
                 {
                   role: '신부 어머니',
                   owner: '송덕순',
