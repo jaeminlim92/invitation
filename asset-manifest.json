@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/invitation/static/css/main.705e8044.css",
-    "main.js": "/invitation/static/js/main.48db4049.js",
+    "main.js": "/invitation/static/js/main.9cc4c679.js",
     "static/js/453.21be8fb1.chunk.js": "/invitation/static/js/453.21be8fb1.chunk.js",
     "static/media/18.jpg": "/invitation/static/media/18.9f57d5d9973bb40f6c7b.jpg",
     "static/media/11.jpg": "/invitation/static/media/11.2dd24376bc537ea5088a.jpg",
@@ -9,7 +9,7 @@
     "static/media/SeoulHangangM.ttf": "/invitation/static/media/SeoulHangangM.39f5472180c87ee602e0.ttf",
     "static/media/SeoulHangangEB.ttf": "/invitation/static/media/SeoulHangangEB.15abaf393928b11c50bc.ttf",
     "static/media/SeoulHangangB.ttf": "/invitation/static/media/SeoulHangangB.824e841e32a4c5ed9965.ttf",
-    "static/media/Comic_Photo.jpg": "/invitation/static/media/Comic_Photo.7809224cb9a43ce165e8.jpg",
+    "static/media/Comic_Photo.jpg": "/invitation/static/media/Comic_Photo.9ae977e6b4d69954c18e.jpg",
     "static/media/9.jpg": "/invitation/static/media/9.b4590db9afac3246af0e.jpg",
     "static/media/Photo2.jpg": "/invitation/static/media/Photo2.3b16376f558f7a49e158.jpg",
     "static/media/Flower.mp3": "/invitation/static/media/Flower.d39fc8ca5a820f985a8e.mp3",
@@ -47,11 +47,11 @@
     "index.html": "/invitation/index.html",
     "static/media/kakao_navi.svg": "/invitation/static/media/kakao_navi.058633a7f6b8fa4f4b7a50694c537f88.svg",
     "main.705e8044.css.map": "/invitation/static/css/main.705e8044.css.map",
-    "main.48db4049.js.map": "/invitation/static/js/main.48db4049.js.map",
+    "main.9cc4c679.js.map": "/invitation/static/js/main.9cc4c679.js.map",
     "453.21be8fb1.chunk.js.map": "/invitation/static/js/453.21be8fb1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.705e8044.css",
-    "static/js/main.48db4049.js"
+    "static/js/main.9cc4c679.js"
   ]
 }
