@@ -1,1 +1,60 @@
-/* App specific styles can be added here if needed */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 반응형 CSS 변수 */
+:root {
+  --app-max-width: 395px;
+  --content-padding: 16px;
+}
+
+/* 화면 크기 별 조정 */
+@media screen and (max-width: 480px) {
+  :root {
+    --app-max-width: 480px; /* 점진적인 변화를 위해 설정 */
+    --content-padding: 10px;
+  }
+
+  .app-container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  :root {
+    --app-max-width: 100%;
+  }
+}
+
+/* 화면 크기가 작아졌을 때 비율 유지 */
+@media screen and (max-width: 320px) {
+  :root {
+    --content-padding: 8px;
+  }
+}
+
+/* 화면 방향 변경 시에도 콘텐츠가 잘 보이도록 */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .app-container {
+    height: auto;
+  }
+}
+
+/* 아이폰 노치 영역에 대한 안전 영역 확보 */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .app-container {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}

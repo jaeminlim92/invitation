@@ -35,7 +35,14 @@ function Transfer() {
                 {
                   role: '신랑 아버지',
                   owner: '임재민',
-                  bank: '하나',
+                  bank: 'SC제일은행',
+                  number: '010-566353-46707',
+                  className: 'account-card'
+                },
+                {
+                  role: '신랑 어머니',
+                  owner: '신계림',
+                  bank: '우리은행',
                   number: '010-566353-46707',
                   className: 'account-card'
                 }
@@ -47,7 +54,14 @@ function Transfer() {
             <Dropdown
               title="신부 측 계좌번호"
               accounts={[
-                {role: '신부', owner: '전주현', bank: '우리', number: '1002-345-678901', className: 'account-card'}
+                {role: '신부', owner: '전주현', bank: '우리은행', number: '1002-345-678901', className: 'account-card'},
+                {
+                  role: '신부 어머니',
+                  owner: '송덕순',
+                  bank: '농협',
+                  number: '603032-52-050697',
+                  className: 'account-card'
+                }
               ]}
               variant="bride"
             />

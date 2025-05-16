@@ -7,8 +7,10 @@
     <meta property="og:description" content="2025년 09월 20일 토요일 오후 5시 30분, 같이 즐겨주세요!">
     <meta property="og:url" content="https://jaeminlim92.github.io/invitation/">
     <meta property="og:image" content="https://jaeminlim92.github.io/invitation/preview_test.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>우리의 결혼식에 초대합니다</title>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=%REACT_APP_NAVER_MAP_API_KEY%"></script>
     <script>
@@ -27,12 +29,25 @@
       document.addEventListener('DOMContentLoaded', function() {
         // 우클릭 방지
         document.addEventListener('contextmenu', function(e) {
+          // 갤러리 이미지는 예외 처리
+          if (e.target.classList.contains('gallery-item') ||
+              e.target.closest('.pswp') ||
+              e.target.classList.contains('pswp__img')) {
+            return true;
+          }
           e.preventDefault();
           return false;
         });
 
         // 드래그 방지
         document.addEventListener('dragstart', function(e) {
+          // 갤러리 이미지는 예외 처리
+          if (e.target.classList.contains('gallery-item') ||
+              e.target.closest('.pswp') ||
+              e.target.classList.contains('pswp__img')) {
+            return true;
+          }
+
           if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') {
             e.preventDefault();
             return false;
@@ -58,9 +73,13 @@
         function disableImageInteraction() {
           var images = document.getElementsByTagName('img');
           for (var i = 0; i < images.length; i++) {
-            images[i].oncontextmenu = function() { return false; };
-            images[i].ondragstart = function() { return false; };
-            images[i].onselectstart = function() { return false; };
+            // 갤러리 이미지는 예외 처리
+            if (!images[i].classList.contains('gallery-item') &&
+                !images[i].closest('.pswp')) {
+              images[i].oncontextmenu = function() { return false; };
+              images[i].ondragstart = function() { return false; };
+              images[i].onselectstart = function() { return false; };
+            }
           }
 
           var videos = document.getElementsByTagName('video');
@@ -92,6 +111,11 @@
         -o-user-drag: none;
         user-drag: none;
         pointer-events: none;
+      }
+
+      /* 갤러리 이미지와 오디오 컨트롤은 클릭 이벤트 허용 */
+      .gallery-item, .pswp__img, .audio-control {
+        pointer-events: auto !important;
       }
 
       /* 입력 필드는 선택 가능하게 유지 */

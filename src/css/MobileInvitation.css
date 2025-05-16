@@ -3,16 +3,66 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  min-height: 100vh; /* height 대신 min-height 사용 */
-  height: auto; /* 자동 높이 */
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .mobileinvitation .div-2 {
   background-color: #ffffff;
-  /* overflow: hidden; 제거 - 이것이 콘텐츠를 잘라내는 원인 */
   position: relative;
-  width: 395px;
-  height: auto; /* 높이 자동 설정 */
+  width: 100%;
+  max-width: 395px;
+  height: auto;
   display: flex;
-  flex-direction: column; /* 수직 정렬 */
+  flex-direction: column;
+  margin: 0 auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  transition: max-width 0.3s ease; /* 부드러운 전환 효과 추가 */
+}
+
+/* 모바일 화면에 대한 미디어 쿼리 */
+@media (max-width: 480px) {
+  .mobileinvitation {
+    padding: 0;
+    background-color: #ffffff; /* 작은 화면에서 배경색을 흰색으로 변경 */
+  }
+
+  .mobileinvitation .div-2 {
+    width: 100%;
+    max-width: 480px; /* 점진적인 변화를 위해 작은 화면에서의 최대 너비 설정 */
+  }
+}
+
+@media (max-width: 395px) {
+  .mobileinvitation .div-2 {
+    max-width: 100%; /* 매우 작은 화면에서는 100%로 설정 */
+  }
+}
+
+/* 화면 너비에 따른 동적 폰트 크기 조정은 그대로 유지 */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 13px;
+  }
 }

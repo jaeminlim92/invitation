@@ -47,6 +47,13 @@
 .info-play-btn {
   width: 20px;
   height: 25px;
+  pointer-events: auto !important;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.info-play-btn:hover {
+  transform: scale(1.1);
 }
 
 .info-lovesong-img {

@@ -64,10 +64,12 @@ function Map() {
 
   return (
     <div>
-      <div className="content" style={{textAlign: 'left'}}>
-        <ul></ul>
-        <ul>서울 동대문구 회기로 56</ul>
-        <ul>세종대왕 기념관</ul>
+      <div className="venue-address">
+        <div className="venue-icon">📍</div>
+        <div className="venue-details">
+          <div className="venue-name">세종대왕 기념관</div>
+          <div className="venue-location">서울 동대문구 회기로 56</div>
+        </div>
       </div>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'}}>
         <div id="map" style={{width: '100%', height: '300px'}} />
@@ -92,7 +94,7 @@ function Map() {
           티맵
         </a>
         <a
-          href={`https://map.kakao.com/link/to/세종대왕기념관,37.59074398064007,127.04359231098572`}
+          href={`https://map.kakao.com/link/map/세종대왕기념관,37.59074398064007,127.04359231098572`}
           style={navButtonStyle}
         >
           <img src={kakao} alt="카카오" className="map-button" />
@@ -113,6 +115,9 @@ function Map() {
         </p>
         <p>
           <strong style={{color: '#772c00'}}>6호선</strong> 고려대역 하차 3번출구 앞
+        </p>
+        <p>
+          <span style={{color: '#7e7d7d'}}> (식 시간 1시간 전 15분 ~ 20분 간격 운행)</span>
         </p>
         <p>&nbsp;</p>
 

@@ -55,3 +55,44 @@
   width: 16px;
   height: 16px;
 }
+
+/* 새로 추가한 장소 스타일 */
+.venue-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  margin: 15px auto;
+  max-width: 80%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ececec;
+}
+
+.venue-icon {
+  font-size: 24px;
+  margin-right: 12px;
+  color: #e74c3c;
+}
+
+.venue-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.venue-name {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.venue-location {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}

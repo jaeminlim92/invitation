@@ -1,3 +1,10 @@
+.meet-at-wedding-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
 
 .at {
   color: #7F0F13;
@@ -24,8 +31,8 @@
   font-style: normal;
   font-weight: 400;
   text-transform: capitalize;
-  position: relative; /* absolute 대신 relative */
-  transform: translateY(-33%) translateX(-4%);
+  position: relative;
+  transform: translateY(-33%)
 }
 
 .text-area {
@@ -33,30 +40,83 @@
   position: relative;
   text-align: center;
   color: #7f0f13;
-  min-height: 120px; /* 최소 높이 설정 */
+  min-height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.follow-wedding {
-  background-image: url('../assets/images/heart_frame.png');
-  background-position: center;
-  background-size: contain; /* 이미지가 컨테이너에 맞게 조절 */
-  background-repeat: no-repeat;
+.follow-wedding-container {
   width: 100%;
-  max-width: 400px;
-  height: 400px;
-  margin: 0 auto; /* 중앙 정렬 */
-  position: relative;
-  color: #FFFFFF;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.follow-wedding > .text {
-  margin-bottom: 10px;
+.follow-wedding {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* 정사각형 비율 유지 */
+  background-position: center;
+  background-size: cover; /* contain에서 cover로 변경하여 꽉 차게 표시 */
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.wedding-info-text {
+  color: #FFFFFF;
+  text-align: center;
   font-size: 14px;
+  padding-bottom: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7); /* 텍스트를 더 잘 보이게 그림자 추가 */
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .follow-wedding {
+    padding-bottom: 100%; /* 정사각형 비율 유지 */
+  }
+}
+
+@media (max-width: 480px) {
+  .meet {
+    font-size: 50px;
+  }
+
+  .wedding {
+    font-size: 54px;
+  }
+
+  .at {
+    font-size: 23px;
+  }
+
+  .wedding-info-text {
+    font-size: 12px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .meet {
+    font-size: 40px;
+  }
+
+  .wedding {
+    font-size: 44px;
+  }
+
+  .at {
+    font-size: 19px;
+  }
+
+  .wedding-info-text {
+    font-size: 11px;
+    padding-bottom: 12px;
+  }
 }

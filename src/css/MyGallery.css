@@ -1,3 +1,13 @@
+.gallery-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
 .textPhoto {
   width: 100%;
   position: relative;
@@ -35,37 +45,47 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 88px;
-}
-
-.gallery-container {
-  transition: all 0.5s ease-in-out;
-  transform-origin: top;
-  overflow: hidden;
-}
-
-.gallery-expandable {
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-
-.gallery-expandable.collapsed {
-  max-height: 950px; /* 6개 이미지 높이에 맞게 조정 */
-}
-
-.gallery-expandable.expanded {
-  max-height: 3000px; /* 충분히 크게 설정 */
+  height: 40px;
+  margin-bottom: 10px;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 0fr); /* 원래대로 0fr로 복구 */
-  grid-gap: 2px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px; /* 모든 간격 균일하게 4px로 설정 */
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto 2px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 2px 4px;
+  box-sizing: border-box;
+}
+
+.gallery-item-wrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 150%; /* 3:2 비율 유지 */
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.gallery-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  pointer-events: auto !important;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
 }
 
 .more-button {
@@ -84,4 +104,50 @@
   font-weight: 400;
   line-height: normal;
   cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* PhotoSwipe 사용자 정의 스타일 */
+.pswp__bg {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.pswp__button--arrow--left:before,
+.pswp__button--arrow--right:before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pswp__top-bar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pswp__caption {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pswp__button,
+.pswp__button--arrow--left:before,
+.pswp__button--arrow--right:before {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.pswp__img {
+  pointer-events: auto !important;
+}
+
+.pswp__zoom-wrap {
+  pointer-events: auto !important;
+}
+
+/* 모든 PhotoSwipe 관련 요소에 pointer-events 활성화 */
+.pswp,
+.pswp__scroll-wrap,
+.pswp__container,
+.pswp__item,
+.pswp__zoom-wrap,
+.pswp__img,
+.pswp__button,
+.pswp__ui {
+  pointer-events: auto !important;
 }
