@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/invitation/static/css/main.1f5375f0.css",
-    "main.js": "/invitation/static/js/main.8968065a.js",
+    "main.css": "/invitation/static/css/main.2ddbad2f.css",
+    "main.js": "/invitation/static/js/main.48db4049.js",
     "static/js/453.21be8fb1.chunk.js": "/invitation/static/js/453.21be8fb1.chunk.js",
     "static/media/18.jpg": "/invitation/static/media/18.9f57d5d9973bb40f6c7b.jpg",
     "static/media/11.jpg": "/invitation/static/media/11.2dd24376bc537ea5088a.jpg",
@@ -19,6 +19,7 @@
     "static/media/20.jpg": "/invitation/static/media/20.81a60eacb76930498078.jpg",
     "static/media/21.jpg": "/invitation/static/media/21.0794c38d8bccf9fa0df5.jpg",
     "static/media/25.jpg": "/invitation/static/media/25.ca610b4f56b654ee6404.jpg",
+    "static/media/heart_frame.jpg": "/invitation/static/media/heart_frame.d0ed9d0fc19e8f34e0e5.jpg",
     "static/media/image_title.png": "/invitation/static/media/image_title.3ed10fd7f9965e59184d.png",
     "static/media/17.jpg": "/invitation/static/media/17.78305a7cdd5d04a31936.jpg",
     "static/media/19.jpg": "/invitation/static/media/19.16881ca2fca403f22199.jpg",
@@ -41,17 +42,16 @@
     "static/media/2.jpg": "/invitation/static/media/2.d59b60206d90292393d0.jpg",
     "static/media/angel_photo.jpg": "/invitation/static/media/angel_photo.21dfbb407d20a3c869ea.jpg",
     "static/media/love_song_component.gif": "/invitation/static/media/love_song_component.9199d8583f47e5862dac.gif",
-    "static/media/heart_frame.png": "/invitation/static/media/heart_frame.468d2e1aee5adb35a815.png",
     "static/media/duck.jpg": "/invitation/static/media/duck.08fcf7cc2f822d5e5680.jpg",
     "static/media/T_map.svg": "/invitation/static/media/T_map.f5bb648e9667e28f4c0c7e622c3c9c46.svg",
     "index.html": "/invitation/index.html",
     "static/media/kakao_navi.svg": "/invitation/static/media/kakao_navi.058633a7f6b8fa4f4b7a50694c537f88.svg",
-    "main.1f5375f0.css.map": "/invitation/static/css/main.1f5375f0.css.map",
-    "main.8968065a.js.map": "/invitation/static/js/main.8968065a.js.map",
+    "main.2ddbad2f.css.map": "/invitation/static/css/main.2ddbad2f.css.map",
+    "main.48db4049.js.map": "/invitation/static/js/main.48db4049.js.map",
     "453.21be8fb1.chunk.js.map": "/invitation/static/js/453.21be8fb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f5375f0.css",
-    "static/js/main.8968065a.js"
+    "static/css/main.2ddbad2f.css",
+    "static/js/main.48db4049.js"
   ]
 }
