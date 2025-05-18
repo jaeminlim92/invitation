@@ -6,14 +6,16 @@ import naver from '../assets/images/navermap.png'
 
 function Map() {
   const mapRef = useRef(null)
-  const [naverLoaded, setNaverLoaded] = useState(false) // ✅ 네이버 API 로드 여부 상태 추가
+  const [naverLoaded, setNaverLoaded] = useState(false)
+  const [kakaoLoaded, setKakaoLoaded] = useState(false)
+
   const navButtonStyle = {
-    display: 'flex', // 내부 정렬용 flex
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
     height: '36px',
-    gap: '6px', // 아이콘과 텍스트 사이 간격
+    gap: '6px',
     backgroundColor: '#ffffff',
     border: '1px solid #ddd',
     borderRadius: '8px',
@@ -22,7 +24,8 @@ function Map() {
     fontSize: '11px',
     fontWeight: 'bold',
     boxShadow: '0 2px 5px rgba(0,0,0,0.05)',
-    whiteSpace: 'nowrap' // 줄바꿈 방지
+    whiteSpace: 'nowrap',
+    cursor: 'pointer'
   }
 
   const coordinates = {
@@ -30,12 +33,48 @@ function Map() {
     longitude: 127.043653
   }
 
+  // 네이버 지도 API 로드 상태 체크
   useEffect(() => {
     if (window.naver && window.naver.maps) {
-      setNaverLoaded(true) // ✅ 네이버 API 로드 완료 시 상태 업데이트
+      setNaverLoaded(true)
     }
   }, [])
 
+  // 카카오 SDK 로드 체크 및 내비 API 로드
+  useEffect(() => {
+    const checkKakaoSdk = () => {
+      if (window.Kakao) {
+        if (!window.Kakao.isInitialized()) {
+          // Footer.jsx에서 초기화되었는지 확인, 초기화되지 않았다면 초기화
+          window.Kakao.init(process.env.REACT_APP_KAKAO_API_KEY || '842323c31c71098b0e3d3406310ee58e')
+        }
+
+        // 카카오내비 API 로드
+        if (!window.Kakao.Navi) {
+          window.Kakao.load('navi')
+        }
+
+        setKakaoLoaded(true)
+      }
+    }
+
+    // 초기 체크
+    checkKakaoSdk()
+
+    // Kakao SDK가 로드되지 않았다면 주기적으로 확인
+    if (!kakaoLoaded) {
+      const interval = setInterval(() => {
+        checkKakaoSdk()
+        if (kakaoLoaded) {
+          clearInterval(interval)
+        }
+      }, 500)
+
+      return () => clearInterval(interval)
+    }
+  }, [kakaoLoaded])
+
+  // 네이버 지도 생성
   useEffect(() => {
     if (!naverLoaded) return
 
@@ -44,15 +83,14 @@ function Map() {
 
     // 네이버 지도 옵션 선택
     const mapOptions = {
-      // 지도의 초기 중심 좌표
       center: location,
-      logoControl: false, // 네이버 로고 표시 X
-      mapDataControl: false, // 지도 데이터 저작권 컨트롤 표시 X
-      scaleControl: false, // 지도 축척 컨트롤의 표시 여부
-      tileDuration: 200, // 지도 타일을 전환할 때 페이드 인 효과의 지속 시간(밀리초)
-      zoom: 16, // 지도의 초기 줌 레벨
-      zoomControl: false, // 줌 컨트롤 표시
-      zoomControlOptions: {position: 9} // 줌 컨트롤 우하단에 배치
+      logoControl: false,
+      mapDataControl: false,
+      scaleControl: false,
+      tileDuration: 200,
+      zoom: 16,
+      zoomControl: false,
+      zoomControlOptions: {position: 9}
     }
     mapRef.current = new naver.maps.Map('map', mapOptions)
 
@@ -60,7 +98,21 @@ function Map() {
       position: location,
       map: mapRef.current
     })
-  }, [naverLoaded])
+  }, [naverLoaded, coordinates.latitude, coordinates.longitude])
+
+  // 카카오 내비 실행 함수
+  const handleKakaoNavi = () => {
+    if (window.Kakao && window.Kakao.Navi) {
+      window.Kakao.Navi.start({
+        name: '세종대왕기념관',
+        x: coordinates.longitude,
+        y: coordinates.latitude,
+        coordType: 'wgs84'
+      })
+    } else {
+      alert('카카오내비를 시작할 수 없습니다. 카카오내비 앱이 설치되어 있는지 확인해주세요.')
+    }
+  }
 
   return (
     <div>
@@ -80,9 +132,9 @@ function Map() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          width: '95%', // 1. 부모 div 너비를 꽉 채우고
-          maxWidth: '500px', // 2. 너무 넓어지지 않게 제한
-          margin: '0 auto', // 3. 부모 div 자체를 가운데 정렬
+          width: '95%',
+          maxWidth: '500px',
+          margin: '0 auto',
           gap: '12px'
         }}
       >
@@ -93,13 +145,13 @@ function Map() {
           <img src={tmap} alt="티맵" className="map-button" />
           티맵
         </a>
-        <a
-          href={`https://map.kakao.com/link/map/세종대왕기념관,37.59074398064007,127.04359231098572`}
+        <button
+          onClick={handleKakaoNavi}
           style={navButtonStyle}
         >
           <img src={kakao} alt="카카오" className="map-button" />
           카카오
-        </a>
+        </button>
         <a
           href={`nmap://route/car?dname=세종대왕 기념관&dlat=${coordinates.latitude}&dlng=${coordinates.longitude}`}
           style={navButtonStyle}

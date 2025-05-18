@@ -34,16 +34,16 @@ function Transfer() {
                 {role: '신랑', owner: '임재민', bank: '하나', number: '010-566353-46707', className: 'account-card'},
                 {
                   role: '신랑 아버지',
-                  owner: '임재민',
+                  owner: '임중섭',
                   bank: 'SC제일은행',
-                  number: '010-566353-46707',
+                  number: '358-20-256772',
                   className: 'account-card'
                 },
                 {
                   role: '신랑 어머니',
                   owner: '신계림',
                   bank: '우리은행',
-                  number: '010-566353-46707',
+                  number: '124-07-144218',
                   className: 'account-card'
                 }
               ]}
