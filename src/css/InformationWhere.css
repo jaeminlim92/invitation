@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 394px;
+  max-width: 480px;
   height: auto;
   padding: 0 10px;
   box-sizing: border-box;
@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 .info-main-img {
@@ -30,6 +30,8 @@
   flex-shrink: 0;
   display: block;
   object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info-music-area {
@@ -61,101 +63,76 @@
 }
 
 .info-family-area {
-  display: flex;
   width: 100%;
-  max-width: 300px; /* 다시 너비 증가 */
-  height: auto;
-  align-items: center;
-  gap: 15px; /* 간격 다시 늘림 */
-  flex-shrink: 0;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  justify-content: center;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.info-emoji {
+  max-width: 330px;
+  margin: 15px auto 25px;
   display: flex;
-  width: 80px; /* 다시 원래 크기로 */
-  height: 65px;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-  color: #000;
-  text-align: center;
-  font-family: "Noto Sans KR";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  gap: 4px;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0;
 }
 
-.info-emoji span {
-  display: block;
-  margin: 0;
-  height: 20px;
-  line-height: 20px;
-}
-
-.info-family-text {
-  color: #000;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  width: 220px;
-  text-align: center; /* 중앙 정렬 추가 */
+.family-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 1px; /* 핵심: 최소 너비로 설정하여 콘텐츠에 맞게 자동 조정 */
 }
 
 .family-row {
-  display: flex; /* grid에서 flex로 변경 */
-  flex-direction: row;
-  justify-content: left; /* 중앙 정렬 */
-  align-items: center;
-  margin-bottom: 6px; /* 간격 다시 약간 늘림 */
-  width: 100%;
-  gap: 4px; /* 요소 간격 추가 */
+  height: 30px;
 }
 
-.parents {
-  text-align: right; /* 오른쪽 정렬 */
-  letter-spacing: 0.2px;
-}
-
-.of {
+.emoji-cell {
+  width: 40px;
   text-align: center;
-  font-size: 13px;
-  margin: 0 4px; /* 양쪽 간격 추가 */
+  padding-right: 8px;
+  font-size: 16px;
+  vertical-align: middle;
 }
 
-.role {
-  text-align: center;
-  font-weight: 500;
-  margin: 0 3px; /* 양쪽 여백 추가 */
-}
-
-.name {
+.text-cell {
   text-align: left;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
-/* 반응형 스타일 추가 */
+/* 반응형 스타일 */
 @media (max-width: 480px) {
   .info-media-area {
     max-width: 90%;
   }
 
   .info-family-area {
-    max-width: 95%;
+    max-width: 280px; /* 명시적으로 최대 너비 제한 */
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .info-family-text {
-    width: auto;
-    flex: 1;
+  .family-table {
+    margin: 0 auto;
+    width: 1px; /* 최소 너비로 설정하여 콘텐츠에 맞게 자동 조정 */
+  }
+
+  .emoji-cell, .text-cell {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .info-family-area {
+    max-width: 260px; /* 더 작은 화면에서 조정 */
+  }
+
+  .text-cell {
+    font-size: 13px;
   }
 }

@@ -35,13 +35,15 @@
 
   .mobileinvitation .div-2 {
     width: 100%;
-    max-width: 480px; /* 점진적인 변화를 위해 작은 화면에서의 최대 너비 설정 */
+    max-width: 100%; /* 화면 크기에 맞게 100%로 설정 */
+    box-sizing: border-box;
+    padding: 0;
   }
 }
 
 @media (max-width: 395px) {
   .mobileinvitation .div-2 {
-    max-width: 100%; /* 매우 작은 화면에서는 100%로 설정 */
+    max-width: 100%;
   }
 }
 

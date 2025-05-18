@@ -168,25 +168,26 @@ function InformationWhere() {
         <img src={frame10Img} alt="장소 이미지" className="info-main-img" />
       </div>
       <div className="info-family-area">
-        <div className="info-emoji">
-          <span>🤵🏻</span>
-          <span>🤍</span>
-          <span>👰🏻‍♀️</span>
-        </div>
-        <div className="info-family-text">
-          <div className="family-row">
-            <span className="parents">임중섭 · 신계림</span>
-            <span className="of">의</span>
-            <span className="role">아들</span>
-            <span className="name">임재민</span>
-          </div>
-          <div className="family-row">
-            <span className="parents">전인수 · 송덕순</span>
-            <span className="of">의</span>
-            <span className="role">&emsp;딸</span>
-            <span className="name">전주현</span>
-          </div>
-        </div>
+        <table className="family-table">
+          <tbody>
+            <tr className="family-row">
+              <td className="emoji-cell">🤵🏻</td>
+              <td className="text-cell">
+                임중섭 · 신계림의 &emsp;&ensp;아들 &emsp;<b>임재민</b>
+              </td>
+            </tr>
+            <tr className="family-row">
+              <td className="emoji-cell">🤍</td>
+              <td className="text-cell"></td>
+            </tr>
+            <tr className="family-row">
+              <td className="emoji-cell">👰🏻‍♀️</td>
+              <td className="text-cell">
+                전인수 · 송덕순의 &emsp;&ensp;&ensp;&ensp;딸 &emsp;<b>전주현</b>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   )
