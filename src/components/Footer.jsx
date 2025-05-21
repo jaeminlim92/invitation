@@ -14,6 +14,18 @@ const Footer = () => {
       // Kakao SDK 초기화
       if (window.Kakao && !window.Kakao.isInitialized()) {
         window.Kakao.init(process.env.REACT_APP_KAKAO_API_KEY || '842323c31c71098b0e3d3406310ee58e')
+
+        // SDK 로드 후 바로 버튼 초기화
+        if (window.Kakao.Share) {
+          try {
+            window.Kakao.Share.createCustomButton({
+              container: '#kakao-share-btn',
+              templateId: 120741
+            })
+          } catch (error) {
+            console.error('카카오톡 공유 버튼 초기화 실패:', error)
+          }
+        }
       }
     }
 
@@ -26,20 +38,12 @@ const Footer = () => {
     }
   }, [])
 
+  // 클릭 핸들러는 더 이상 createCustomButton을 호출하지 않음
   const handleShareKakao = () => {
-    if (window.Kakao && window.Kakao.Share) {
-      try {
-        window.Kakao.Share.createCustomButton({
-          container: '#kakao-share-btn',
-          templateId: 120741
-        })
-      } catch (error) {
-        console.error('카카오톡 공유 실패:', error)
-        alert('카카오톡 공유 기능을 사용할 수 없습니다.')
-      }
-    } else {
+    if (!window.Kakao || !window.Kakao.Share) {
       alert('카카오톡 SDK를 불러올 수 없습니다.')
     }
+    // 버튼 초기화는 이미 useEffect에서 수행됨
   }
 
   return (
